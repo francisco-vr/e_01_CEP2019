@@ -13,11 +13,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R Markdown
 
-**This is an R Markdown document**. Markdown is a simple formatting syntax for authoring _HTML, PDF, and MS Word_¨ documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+**Hola!** Este es un archivo en Rmarkdown. _¿Qué es Rmarkdown?_, Rmarkdown es un paquete de Rstudio utiliza un lenguaje  de "marcaje" para construir textos y presentaciones. Puedes hacer archivos en formato _HTML, PDF, and MS word_. Ya pero: Qué chucha es el "marcaje"? El marcaje es un lenguaje de programación donde reparar texto para salir formteado de la forma en que tu quieras; es como cuando tu escribes en Whatsapp o Telegram las "" o las "__" para las negritas y cursivas, y cuando envías el mensaje aparece el resultado que son **Las negritas** o _Las cursivas_
 
-* puede que quede sola
+Además de eso puedes escribir distinos puntos por separado:
 
-sin embargo:
+* Como este
+
+
+Sin embargo puedes hacer sub categorías cuando estás enlistando algo:
 
 * Podemos hacer una
 
@@ -27,13 +30,13 @@ sin embargo:
 
 ## Otros ejemplos
 
-Acá hay algunos elementos para probar si los comandos funcan bien [@andersonIndependenceDigitalActivism2019]. Lamentablemente el primero, de la imagen, no me funciona :( Me siento estafado por R para Ciencia de datos [@lindh_fragilidad_2019, @anagnostopoulos_viral_2014]:
+Acá hay algunos elementos para probar si los comandos funcan bien [@andersonIndependenceDigitalActivism2019]. Lamentablemente el primero, de la imagen, no me funciona :( Me siento estafado por R para Ciencia de datos [@lindh_fragilidad_2019; @anagnostopoulos_viral_2014]:
 
 !(gnu-suri/Documentos/proyectos_R/e_01_CEP2019/graf.prueba.png)
 
-superscript^2^ ¨
+Pero no importa, porque eso ya lo resolveré pronto
 
-Sin embargo para este grico sí funciona, aunque bastante feo.
+Por otro lado esta taba sí funciona, aunque es bastante fea.
 
 ```{r tabla1, echo = FALSE, message=FALSE, warning=FALSE}
 load("Data/intermediate Data/P_CEP2019.RData")
@@ -41,7 +44,12 @@ library(summarytools)
 freq(CEP_Electivo$Expo_RRSS, weights = CEP_Electivo$POND, na.rm = TRUE)
 ```
 
+¡Pero no os preocupéis! Existe un paquete llamado ``knitr`` que nos permitirá hacer bellas tablas que cualquier consultora envidiaría.
+
+
 \newpage
+
+Aunque ....
 
 No todo es tabla en esta vida, también tenemos... ¡Gráficos!
 
@@ -68,6 +76,8 @@ CEP_Electivo%>%
                      labels = c("Mucha Información", "Poca información"))
 ```
 
+Se ve muy apretado, cierto? Bueno eso también será cambiado en el futuro para ser la envidia del guatón correa
+
 
 ## Otras partes más fomes que vienen en el archivo por defecto
 
@@ -87,5 +97,8 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+\newpage
+
 
 ## Referencias
