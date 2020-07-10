@@ -1,0 +1,5 @@
+La carpeta IntermedianteData debe incluir
+
+* Uno o más archivos intermedios (posiblemente organizados en subcarpetas)
+
+

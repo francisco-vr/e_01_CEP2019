@@ -1,0 +1,5 @@
+E la carpeta AnalysisData deberíamos incluir
+
+* Uno o más archivos de datos (Posiblemente organizados en subcarpetas) y el Data Appendix (DataAppendix.pdf)
+
+

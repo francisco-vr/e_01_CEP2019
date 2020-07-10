@@ -1,0 +1,5 @@
+La carpeta de procesamiento debería incluir:
+
+* Uno o más scripts que transformen el input data a analysis data
+
+

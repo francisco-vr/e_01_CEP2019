@@ -1,0 +1,5 @@
+La capeta Analysis debe incluir
+
+* Uno o más scripts que conduzcan el análisis que genera los resultados que aparezcan en el reporte
+
+

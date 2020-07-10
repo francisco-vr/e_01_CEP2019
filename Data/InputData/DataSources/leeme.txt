@@ -1,0 +1,8 @@
+En esta carpeta encontramos:
+
+
+ 	-"Encuesta CEP 84 Dic 2019 v1.sav" Base de datos de la encuesta de Opinión del centro de eSTUDIOS PÚBLICOS (CEP), correspondiente a Dciembre del 2019. Formato SPSS
+ 	
+ 	-  "Manual del Usuario Encuesta CEP 84 v2.pdf":Libro de códigos y ficha metodológica de la encuesta de opinión pública CEP
+ 	
+ 	

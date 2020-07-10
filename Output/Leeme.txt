@@ -1,0 +1,5 @@
+The output folder should include
+
+*Archivos log, gráficos, archivos de texto, etc, que capturen los resultados generados por los scripts de análisis (tipicamente organizados en subcarpetas)
+
+

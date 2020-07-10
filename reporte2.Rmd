@@ -1,0 +1,91 @@
+---
+title: "Reporte - Herramientas para el análisis cuantitativo: Ciencia Abierta y Software Libre"
+author: "Francisco Villarroel"
+date: "03-07-2020"
+bibliography: mi_biblioteca.bib
+csl: apa.csl
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+**This is an R Markdown document**. Markdown is a simple formatting syntax for authoring _HTML, PDF, and MS Word_¨ documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+* puede que quede sola
+
+sin embargo:
+
+* Podemos hacer una
+
+  * y luego otra
+  
+  * y otra más!
+
+## Otros ejemplos
+
+Acá hay algunos elementos para probar si los comandos funcan bien [@andersonIndependenceDigitalActivism2019]. Lamentablemente el primero, de la imagen, no me funciona :( Me siento estafado por R para Ciencia de datos [@lindh_fragilidad_2019, @anagnostopoulos_viral_2014]:
+
+!(gnu-suri/Documentos/proyectos_R/e_01_CEP2019/graf.prueba.png)
+
+superscript^2^ ¨
+
+Sin embargo para este grico sí funciona, aunque bastante feo.
+
+```{r tabla1, echo = FALSE, message=FALSE, warning=FALSE}
+load("Data/intermediate Data/P_CEP2019.RData")
+library(summarytools)
+freq(CEP_Electivo$Expo_RRSS, weights = CEP_Electivo$POND, na.rm = TRUE)
+```
+
+\newpage
+
+No todo es tabla en esta vida, también tenemos... ¡Gráficos!
+
+Un ejemplo de ellos es el siguiente:
+
+
+```{r grafico1,echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+CEP_Electivo%>% 
+   filter(!is.na(Expo_RRSS))%>% 
+   ggplot() +
+   geom_bar(mapping = aes(x = InflEmpre, y = (..count..)/sum(..count..), fill = factor(Expo_RRSS)),
+            position = "dodge") +
+   scale_y_continuous(labels=scales::percent) + 
+   scale_x_continuous(labels = c("Muy De acuerdo", "De Acuerdo",
+                                 "Ni acuerdo ni desacuerdo","En desacuerdo", "Muy en desacuerdo"),
+                      breaks = c(1,2,3,4,5)) +
+   labs(title = "'Las empresas y los grupos de interés influyen enormemente en las políticas públicas'",
+        x = "Nivel de Acuerdo", y = "Proporción",
+        caption = "Fuente: Elaboración propia, en base a los datos de Encuesta CEP, Diciembre 2019") +
+   xlab("Nivel de acuerdo con frase") + ylab("Porcentaje") + 
+   scale_fill_manual("Consumo de información vía Redes Sociales",
+                     values = c("#E41A1C", "#377EB8"),
+                     labels = c("Mucha Información", "Poca información"))
+```
+
+
+## Otras partes más fomes que vienen en el archivo por defecto
+
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Referencias

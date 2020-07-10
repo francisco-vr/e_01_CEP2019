@@ -1,0 +1,5 @@
+La carpeta DataAppendix debe incluir
+
+* Uno o más scripts que generen estadística descriptiva, figuras, y tablas que aparezcan en el DataAppendix (DataAppendix.pdf)
+
+
