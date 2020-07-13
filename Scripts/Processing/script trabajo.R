@@ -24,9 +24,9 @@ CEP_Electivo <- select(CEP_Electivo,ESP_5_1,ESP_5_3,ESP_5_4,ESP_6_1,
 
 save(CEP_Electivo, file = "Data/intermediate Data/P_CEP2019.RData")
 
-load("Data/intermediate Data/P_CEP2019.RData")
 
 #   [Modificación de base de Datos]
+load("Data/intermediate Data/P_CEP2019.RData")
 
 #Cambiar nombres
 
@@ -47,9 +47,8 @@ CEP_Electivo <- rename(CEP_Electivo,
 
 # Recodificación sexo
 
-CEP_Electivo$sexo <- as.numeric(CEP_Electivo$Sexo)
-CEP_Electivo <- mutate(CEP_Electivo, SexoRecod = recode(CEP_Electivo$sexo, "1" = "hombre",
-                                                        "2" = "mujer"))
+CEP_Electivo$Sexo <- as.numeric(CEP_Electivo$Sexo)
+CEP_Electivo <- mutate(CEP_Electivo, SexoRecod = recode(CEP_Electivo$Sexo, "1" = "hombre","2" = "mujer"))
 class(CEP_Electivo$SexoRecod) #Queda como Character
 
 #Recodificación edad
@@ -165,10 +164,11 @@ ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$NivelEduc, prop = "c", weights = CEP
 ##"Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos"
 ## 1 = Muy de acuerdo  5 = muy en desacuerdo
 
-descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", "sd", "cv"),
-      weights = CEP_Electivo$POND)
+Tabla1.1 <-descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", "sd", "cv"),
+      weights = CEP_Electivo$POND, style = 'rmarkdown')
 
-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo, weights = CEP_Electivo$POND, na.rm = T)
+Tabla1.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo,prop = "r", weights = CEP_Electivo$POND, na.rm = T,
+                  style = 'rmarkdown')
 
 ## [RESULTADO N°2] ##
 #Grado de acuerdo con pregunta:
@@ -177,22 +177,24 @@ ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo, weights = CEP_Electivo$PON
 ## 1 = Muy de acuerdo  5 = muy en desacuerdo
 
 #desriptivos univariados:
-descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med", "sd", "cv"),
-      weights = CEP_Electivo$POND)
+Tabla2.1 <-descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med", "sd", "cv"),
+      weights = CEP_Electivo$POND, style = 'rmarkdown')
 
 #bivariado según exposición a RRSS
-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos, weights = CEP_Electivo$POND)
+Tabla2.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos,prop = "r", weights = CEP_Electivo$POND,
+                  style = 'rmarkdown')
 
 ## [RESULTADO N°3] ##
 ##"Las empresas y los grupos de interés influyen enormemente en las políticas públicas" según exposición a RRSS
 ## 1 = Muy de acuerdo  5 = muy en desacuerdo
 
 #Descriptivo univariado
-descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med", "sd", "cv"),
-      weights = CEP_Electivo$POND)
+Tabla3.1 <-descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med", "sd", "cv"),
+      weights = CEP_Electivo$POND, style = 'rmarkdown')
 
 #Bivariado según exposición a RRSS
-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP_Electivo$POND)
+Tabla3.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP_Electivo$POND,
+       style = 'rmarkdown')
 
 
 # Resultados sobre percepción de partidos políticos, según exposición a info de RRSS --------
@@ -202,16 +204,27 @@ ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP
 ##"A Los partidos políticos reflejan las demandas de los ciudadanos"
 ## 1 = Muy de acuerdo  5 = muy en desacuerdo
 
-descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","sd","cv"), weights = CEP_Electivo$POND)
-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND)
+Tabla4.1 <-descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","sd","cv"), weights = CEP_Electivo$POND,
+      style = 'rmarkdown')
+Tabla4.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND,
+                  style = 'rmarkdown')
 
 ## [RESULTADO N°5] ##
 ##Grado de acuerdo con pregunta
 ##"Los partidos políticos son indispensables para la democracia"
 ## 1 = Muy de acuerdo  5 = muy en desacuerdo
 
-descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med", "sd", "cv"), weights = CEP_Electivo$POND)
-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPolIndis, prop = "r", weights = CEP_Electivo$POND)
+Tabla5.1 <-descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med", "sd", "cv"),
+                 weights = CEP_Electivo$POND, style = 'rmarkdown')
+Tabla5.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPolIndis, prop = "r", weights = CEP_Electivo$POND,
+                  style = 'rmarkdown')
+
+#generación de un solo objeto para tablas
+ResulTablas <- list(Tabla1.1, Tabla1.2, Tabla2.1, Tabla2.2, Tabla3.1, Tabla3.2, Tabla4.1, Tabla4.2,
+                    Tabla5.1, Tabla5.2)
+
+#Resultados de tablas
+saveRDS(ResulTablas, file = "Data/Analysis-Data/Tablas-reporte.rds")
 
 
 # Graficos de resultados --------------------------------------------------
@@ -348,7 +361,11 @@ grafico5 <-CEP_Electivo%>%
 ggsave(grafico5, filename = "grafico5.png",
        dpi = 400, width = 11, height = 6)
 
-# Tareas pendientes a resolver y vertedero --------------------------------------------
+#Listado de gráficos
+ResultGraf <- list(grafico1, grafico2, grafico3, grafico4, grafico5)
+saveRDS(ResultGraf, file = "Data/Analysis-Data/gráficos-reporte.rds")
+
+   # Tareas pendientes a resolver y vertedero --------------------------------------------
 
 # En lo que respecta a los resultados
 # Revisar los resultados de varianza y curtosis que siguen sin salir bien (Quizás falta comando filter?)
