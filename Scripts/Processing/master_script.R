@@ -18,7 +18,7 @@ pacman::p_load(tidyverse,
 
 #Parte 1: carga y recorte de base de datos
 # Expulsa archivo de datos para editar
-source("Scripts/Processing/limpieza-base.R")
+source("Scripts/Processing/carga-base.R")
 
 # Parte 2: Limpieza de base de datos
 # recodifica y agrupa. expulsa base de datos lista para analizar
