@@ -3,13 +3,16 @@ title: "**Redes Sociales, Participación política y polarización**"
 subtitle: "Estudio de la opinión pública y su consumo de informacion en plataformas digitales"
 author: "Francisco Villarroel"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-bibliography: Mi biblioteca.bib
+bibliography: Mi  biblioteca.bib
 csl: apa.csl
 output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(kableExtra)
+library(knitr)
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
 
 ## Introducción
@@ -42,9 +45,9 @@ Por otro lado, la ciudadanía la comprendemos como una forma de articulación so
 
 El último de estas diadas de conceptos es el de opinión pública. Este se comprende como el escenario donde la sociedad civil intenta disputar el sentido común y la legitimidad del gobierno, dado que lo público es de “interés general, el bien común, y en esencia, la res pública” [@sartoriElementosTeoriaPolitica2002]. Es importante entender que la opinión pública está constantemente mediada por actores y mecanismos que buscan dominarla como la propaganda o los medios de comunicación de masas, pero que es capaz de generar sus respuestas contra públicas que los teóricos de las redes sociales digitales han podido contrahegemonizar [@castellsComunicacionPoder2009; @chadwick_hybrid_2013].
 
-El último concepto que traemos a colación es el de polarización política. Con polarización política Con Polarización política entiendo como el “distanciamiento ideológico”, y que siguiendo a Sartori (2009), tienen características de tendencia ideológica centrífuga por sobre la centrípeta(178), es decir que hay una tendencia de irse hacia los extremos de las posiciones sociales de todo el espectro ideológico más que al centro y donde  “la distancia entre ellos abarca el espectro máximo posible de opinión” (177),  con estructuración ideológica congenita que produce distanciamiento hasta en los fundamentos principales en la que se funda su ideología (179).
+El último concepto que traemos a colación es el de polarización política. Con polarización política Con Polarización política entiendo como el “distanciamiento ideológico”, y que siguiendo a Sartori (2009), tienen características de tendencia ideológica centrífuga por sobre la centrípeta [-@sartori_partidos_2009 178], es decir que hay una tendencia de irse hacia los extremos de las posiciones sociales de todo el espectro ideológico más que al centro y donde  “la distancia entre ellos abarca el espectro máximo posible de opinión” [-@sartori_partidos_2009 177],  con estructuración ideológica congenita que produce distanciamiento hasta en los fundamentos principales en la que se funda su ideología [-@sartori_partidos_2009 179].
 
-Los estudios sobre polarización política han sido bastante variados y la ciencia política mantiene una tradición bastante marcada de entenderlas como dispersión de pensamiento (Bordonaba-Plou, 2019), sin embargo vale recordar que hay otras sos formas de observar a polarización: la llamada “polarización por grupos” que se define por la distancia de pensamiento entre personas que ya se identifican como similares, que busca constatar si “se están formando o no grupos distantes unos de otros y con preferencias incompatibles” (DiMaggio et al., 1996; Lindh et al., 2019). O como el mismo Bordona-Plou propone, entender la polarización como “impermeabilidad”: “se refiere al grado en el que las poblaciones o los grupos se vuelven impermeables a las ideas, argumentos o razones de otros grupos, por ejemplo, de aquellos que tienen ideas e intereses políticos distintos. Un grupo puede polarizarse políticamente en la medida en que cada vez sea más impermeable a las ideas políticas de los grupos con ideología no afín” (Bordonaba-Plou, 2019: 304).
+Los estudios sobre polarización política han sido bastante variados y la ciencia política mantiene una tradición bastante marcada de entenderlas como dispersión de pensamiento [@bordonaba-plouPolarizacionComoImpermeabilidad2019], sin embargo vale recordar que hay otras sos formas de observar a polarización: la llamada “polarización por grupos” que se define por la distancia de pensamiento entre personas que ya se identifican como similares, que busca constatar si “se están formando o no grupos distantes unos de otros y con preferencias incompatibles” [@dimaggio_have_1996; @lindh_fragilidad_2019]. O como el mismo Bordona-Plou propone, entender la polarización como “impermeabilidad”: “se refiere al grado en el que las poblaciones o los grupos se vuelven impermeables a las ideas, argumentos o razones de otros grupos, por ejemplo, de aquellos que tienen ideas e intereses políticos distintos. Un grupo puede polarizarse políticamente en la medida en que cada vez sea más impermeable a las ideas políticas de los grupos con ideología no afín” [@bordonaba-plouPolarizacionComoImpermeabilidad2019, 304].
 
 La ventaja que tiene a primera visión sobre la polarización es que es bastante sencilla de establecer para estudios cuantitativos como encuestas sociales o de opinión policía, frente a una dificultad metodológica de la segunda, más accesible a experimentos que diseños muestrales grandes. Por otro lado, la debilidad de la primera definición frente a la segunda es su posible excesiva estandarización y poca sensibilidad a los matices que podrían haber entre formas de polarización, así como una posible caricaturización del abanico político/ideológico total que puede tener una población determinada.
 
@@ -67,9 +70,9 @@ Sin embargo puedes hacer sub categorías cuando estás enlistando algo:
 
 * Podemos hacer una
 
-  * y luego otra
-  
-  * y otra más!
+* y otra
+
+* Quizas una tercera
 
 ## Otros ejemplos
 
@@ -99,51 +102,21 @@ No todo es tabla en esta vida, también tenemos... ¡Gráficos!
 Un ejemplo de ellos es el siguiente:
 
 
-```{r grafico1,echo=FALSE, message=FALSE, warning=FALSE}
-library(tidyverse)
-CEP_Electivo%>% 
-   filter(!is.na(Expo_RRSS))%>% 
-   ggplot() +
-   geom_bar(mapping = aes(x = InflEmpre, y = (..count..)/sum(..count..), fill = factor(Expo_RRSS)),
-            position = "dodge") +
-   scale_y_continuous(labels=scales::percent) + 
-   scale_x_continuous(labels = c("Muy De acuerdo", "De Acuerdo",
-                                 "Ni acuerdo ni desacuerdo","En desacuerdo", "Muy en desacuerdo"),
-                      breaks = c(1,2,3,4,5)) +
-   labs(title = "'Las empresas y los grupos de interés influyen enormemente en las políticas públicas'",
-        x = "Nivel de Acuerdo", y = "Proporción",
-        caption = "Fuente: Elaboración propia, en base a los datos de Encuesta CEP, Diciembre 2019") +
-   xlab("Nivel de acuerdo con frase") + ylab("Porcentaje") + 
-   scale_fill_manual("Consumo de información vía Redes Sociales",
-                     values = c("#E41A1C", "#377EB8"),
-                     labels = c("Mucha Información", "Poca información"))
-```
-
-Se ve muy apretado, cierto? Bueno eso también será cambiado en el futuro para ser la envidia del guatón correa
-
 
 ## Otras partes más fomes que vienen en el archivo por defecto
 
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 \newpage
 
 ## **Anexos: Tablas de frecuencia, cruzadas y tablas de Varianza y Curtosis, segun preguntas seleccionadas**
 
+```{r, echo=FALSE}
+knitr::kable(`tablas`[[1]], digits = 2, caption = "Descriptivos protesta")
+```
 
 \newpage
 ## Referencias
