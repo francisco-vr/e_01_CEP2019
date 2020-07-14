@@ -30,8 +30,9 @@ CEP_Electivo <- rename(CEP_Electivo,
 # Recodificación sexo
 
 CEP_Electivo$sexo <- as.numeric(CEP_Electivo$Sexo)
-CEP_Electivo <- mutate(CEP_Electivo, SexoRecod = recode(CEP_Electivo$sexo, "1" = "hombre",
-                                                        "2" = "mujer"))
+CEP_Electivo <- mutate(CEP_Electivo, 
+                       SexoRecod = dplyr::recode(sexo, "1" = "hombre",
+                                                 "2" = "mujer"))
 class(CEP_Electivo$SexoRecod) #Queda como Character
 
 #Recodificación edad
@@ -39,8 +40,8 @@ CEP_Electivo$Edad <- as.numeric(CEP_Electivo$Edad)
 class(CEP_Electivo$Edad)
 CEP_Electivo <- mutate(CEP_Electivo, Edadrec = car::recode(CEP_Electivo$Edad, "18:39 = 1; 40:64 = 2;
                                                            65:99 = 3"))
-CEP_Electivo <- mutate(CEP_Electivo, Edadrec = recode(CEP_Electivo$Edadrec, "1" = "Postdictadura",
-                                                      "2" = "Dictadura","3" = "Predictadura"))
+CEP_Electivo <- mutate(CEP_Electivo, Edadrec = dplyr::recode(CEP_Electivo$Edadrec, "1" = "Postdictadura",
+                                                             "2" = "Dictadura","3" = "Predictadura"))
 
 #Las edades se agrupan según criterios expuestos en Lindh et.al(2019)donde observa en qué momento histórico
 #Las personas se vuelven adultas. así está en "pre dictadura", donde se hicieron adultos antes de 1973, los
@@ -51,39 +52,39 @@ CEP_Electivo$NivEduc<- as.numeric(CEP_Electivo$NivEduc)
 table(CEP_Electivo$NivEduc)
 CEP_Electivo <- mutate(CEP_Electivo, NivelEduc = car::recode(CEP_Electivo$NivEduc,
                                                              "0:1 = 1; 2:5 = 2; 6 = 3; 7:9 = 4; else = NA"))
-CEP_Electivo <- mutate(CEP_Electivo, NivelEduc = recode(CEP_Electivo$NivelEduc, "1" = "Sin estudios",
-                                                        "2" = "Secundaria e inferior","3" = "Técnica",
-                                                        "4" = "Universitaria o superior"))
+CEP_Electivo <- mutate(CEP_Electivo, NivelEduc = dplyr::recode(CEP_Electivo$NivelEduc, "1" = "Sin estudios",
+                                                               "2" = "Secundaria e inferior","3" = "Técnica",
+                                                               "4" = "Universitaria o superior"))
 table(CEP_Electivo$NivelEduc)
 
 #Recodificación exposición a información - RRSS
 CEP_Electivo$ExpoRRSS <- as.numeric(CEP_Electivo$ExpoRRSS)
 CEP_Electivo <-mutate(CEP_Electivo,Expo_RRSS = car::recode(CEP_Electivo$ExpoRRSS, "1:2 = 1; 3:5 = 2; else = NA"))
-CEP_Electivo <- mutate(CEP_Electivo, Expo_RRSS = recode(CEP_Electivo$Expo_RRSS,"1" = "Mucha información",
-                                                        "2" = "Poca información"))
+CEP_Electivo <- mutate(CEP_Electivo, Expo_RRSS = dplyr::recode(CEP_Electivo$Expo_RRSS,"1" = "Mucha información",
+                                                               "2" = "Poca información"))
 table(CEP_Electivo$Expo_RRSS)
 
 #Recodificación exposición a información - TV
 CEP_Electivo$ExpoTV <-as.numeric(CEP_Electivo$ExpoTV)
 CEP_Electivo <- mutate(CEP_Electivo, Expo_TV = car::recode(CEP_Electivo$ExpoTV,"1:2 = 1; 3:5 = 2; else = NA"))
-CEP_Electivo <- mutate(CEP_Electivo, Expo_TV = recode(CEP_Electivo$Expo_TV, "1" = "Mucha información",
-                                                      "2" = "Poca información"))
+CEP_Electivo <- mutate(CEP_Electivo, Expo_TV = dplyr::recode(CEP_Electivo$Expo_TV, "1" = "Mucha información",
+                                                             "2" = "Poca información"))
 table(CEP_Electivo$Expo_TV)
 
 #Recodificación Exposición - Radio
 CEP_Electivo$ExpoRadio <- as.numeric(CEP_Electivo$ExpoRadio)
 CEP_Electivo <- mutate(CEP_Electivo, Expo_Radio = car::recode(CEP_Electivo$ExpoRadio, "1:2 = 1; 3:5 = 2;
                                                              else = NA"))
-CEP_Electivo <- mutate(CEP_Electivo, Expo_Radio = recode(CEP_Electivo$Expo_Radio,"1" = "Mucha información",
-                                                         "2" = "Poca información"))
+CEP_Electivo <- mutate(CEP_Electivo, Expo_Radio = dplyr::recode(CEP_Electivo$Expo_Radio,"1" = "Mucha información",
+                                                                "2" = "Poca información"))
 
 #Recodificación Exposición - Diarios
 
 CEP_Electivo$ExpoDiario <- as.numeric(CEP_Electivo$ExpoDiario)
 CEP_Electivo <- mutate(CEP_Electivo, Expo_Diario = car::recode(CEP_Electivo$ExpoDiario,"1:2 = 1; 3:5 = 2;
                                                              else = NA" ))
-CEP_Electivo <- mutate(CEP_Electivo, Expo_Diario = recode(CEP_Electivo$Expo_Diario,"1" = "Mucha información",
-                                                          "2" = "Poca información"))
+CEP_Electivo <- mutate(CEP_Electivo, Expo_Diario = dplyr::recode(CEP_Electivo$Expo_Diario,"1" = "Mucha información",
+                                                                 "2" = "Poca información"))
 # recodificar variables - acuerdo sobre democracia y partidos políticos
 
 ## Las políticas públicas son lo que quiere la mayoría de los ciudadanos
