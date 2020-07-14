@@ -5,7 +5,7 @@
 
 # Construcción de tablas
 
-CEP_Electivo <-load("Data/intermediate Data/P_CEP2019.RData")
+load("Data/intermediate Data/P_CEP2019.RData")
 
 # Descripción de la muestra de Exposición a info de RRSS ------------------
 

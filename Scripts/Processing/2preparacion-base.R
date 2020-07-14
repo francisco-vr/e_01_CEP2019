@@ -5,7 +5,10 @@
 
 
 #   [Modificación de base de Datos]
-CEP_Electivo <-load("Data/intermediate Data/P_CEP2019.RData")
+load("Data/intermediate Data/P_CEP2019.RData")
+
+CEP_Electivo <- select(CEP_Electivo,ESP_5_1,ESP_5_3,ESP_5_4,ESP_6_1,
+                       ESP_6_2,DS_P1,DS_P2_EXACTA,DS_P4,ESP_30_1:ESP_30_4, PONDERADOR)
 
 #Cambiar nombres
 

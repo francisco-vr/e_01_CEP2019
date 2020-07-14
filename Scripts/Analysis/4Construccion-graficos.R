@@ -5,7 +5,7 @@
 
 # Construcción de gráficos
 
-CEP_Electivo <-load("Data/intermediate Data/P_CEP2019.RData")
+load("Data/intermediate Data/P_CEP2019.RData")
 
 ## [RESULTADO N°1] ##
 ## Gráfico de Barras bivariado sobre grado de acuerdo con la frase:
@@ -143,3 +143,5 @@ ggsave(grafico5, filename = "grafico5.png",
 ResultGraf <- list(grafico1, grafico2, grafico3, grafico4, grafico5)
 saveRDS(ResultGraf, file = "Data/Analysis-Data/gráficos-reporte.rds")
 
+# Limpiar entorno de trabajo
+rm(list=ls())
