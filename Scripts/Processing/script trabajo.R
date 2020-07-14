@@ -3,13 +3,13 @@
 # MAGÍSTER EN CCSS UNIVERSIDAD DE CHILE - 2020 
 
 # Carga de paquetes -------------------------------------------------------
-
+(dplyr)
 #Carga de paquetes y archivo de base de datos original
 
 library(haven)
 library(tidyr)
 library(tidyverse)
-library(dplyr)
+library
 
 CEP_Electivo <-as.data.frame(read_spss("Data/InputData/DataSources/Encuesta CEP 84 Dic 2019 v1.sav"))
 
@@ -170,6 +170,12 @@ Tabla1.1 <-descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", 
 Tabla1.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo,prop = "r", weights = CEP_Electivo$POND, na.rm = T,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 1
+TabAnexo1 <-CEP_Electivo %>%
+   group_by(Expo_RRSS) %>%
+   summarise(VarGrupal1 = var(PPubMayo, na.rm = T),
+             KurtoGrupal1 = psych::kurtosi(PPubMayo, na.rm = T))
+
 ## [RESULTADO N°2] ##
 #Grado de acuerdo con pregunta:
 ##"Los ciudadanos más ricos tienen más influencia que los demás ciudadanos en las políticas públicas" según exposición
@@ -184,6 +190,12 @@ Tabla2.1 <-descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med",
 Tabla2.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos,prop = "r", weights = CEP_Electivo$POND,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 2
+TabAnexo2 <-CEP_Electivo %>%
+   group_by(Expo_RRSS) %>%
+   summarise(VarGrupal1 = var(InflRicos, na.rm = T),
+             KurtoGrupal1 = psych::kurtosi(InflRicos, na.rm = T))
+
 ## [RESULTADO N°3] ##
 ##"Las empresas y los grupos de interés influyen enormemente en las políticas públicas" según exposición a RRSS
 ## 1 = Muy de acuerdo  5 = muy en desacuerdo
@@ -196,6 +208,11 @@ Tabla3.1 <-descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med",
 Tabla3.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP_Electivo$POND,
        style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 3
+TabAnexo3 <-CEP_Electivo %>%
+   group_by(Expo_RRSS) %>%
+   summarise(VarGrupal1 = var(InflEmpre, na.rm = T),
+             KurtoGrupal1 = psych::kurtosi(InflEmpre, na.rm = T))
 
 # Resultados sobre percepción de partidos políticos, según exposición a info de RRSS --------
 
@@ -209,6 +226,12 @@ Tabla4.1 <-descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","
 Tabla4.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 4
+TabAnexo4 <-CEP_Electivo %>%
+   group_by(Expo_RRSS) %>%
+   summarise(VarGrupal1 = var(DemanPPol, na.rm = T),
+             KurtoGrupal1 = psych::kurtosi(DemanPPol, na.rm = T))
+
 ## [RESULTADO N°5] ##
 ##Grado de acuerdo con pregunta
 ##"Los partidos políticos son indispensables para la democracia"
@@ -219,9 +242,15 @@ Tabla5.1 <-descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med",
 Tabla5.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPolIndis, prop = "r", weights = CEP_Electivo$POND,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 5
+TabAnexo5 <-CEP_Electivo %>%
+   group_by(Expo_RRSS) %>%
+   summarise(VarGrupal1 = var(PPolIndis, na.rm = T),
+             KurtoGrupal1 = psych::kurtosi(PPolIndis, na.rm = T))
+
 #generación de un solo objeto para tablas
-ResulTablas <- list(Tabla1.1, Tabla1.2, Tabla2.1, Tabla2.2, Tabla3.1, Tabla3.2, Tabla4.1, Tabla4.2,
-                    Tabla5.1, Tabla5.2)
+ResulTablas <- list(Tabla1.1, Tabla1.2, TabAnexo1, Tabla2.1, Tabla2.2, TabAnexo2, Tabla3.1, Tabla3.2,
+                    TabAnexo3, Tabla4.1, Tabla4.2, TabAnexo4, Tabla5.1, Tabla5.2, TabAnexo5)
 
 #Resultados de tablas
 saveRDS(ResulTablas, file = "Data/Analysis-Data/Tablas-reporte.rds")
@@ -365,29 +394,3 @@ ggsave(grafico5, filename = "grafico5.png",
 ResultGraf <- list(grafico1, grafico2, grafico3, grafico4, grafico5)
 saveRDS(ResultGraf, file = "Data/Analysis-Data/gráficos-reporte.rds")
 
-   # Tareas pendientes a resolver y vertedero --------------------------------------------
-
-# En lo que respecta a los resultados
-# Revisar los resultados de varianza y curtosis que siguen sin salir bien (Quizás falta comando filter?)
-
-## PRUEBA DE VARIANZA Y CURTOSIS
-
-#Varianza y curtosis pregunta 1
-group_by(CEP_Electivo, Expo_RRSS)%>%
-   summarise(VarGrupal1 = var(CEP_Electivo$PPubMayo,na.rm = T), KurtoGrupal1 = kurtosi(CEP_Electivo$PPubMayo, na.rm = T))
-
-#Varianza y curtosis pregunta 2
-group_by(CEP_Electivo, Expo_RRSS)%>%
-  summarise(VarGrupal2 = var(CEP_Electivo$InflRicos, na.rm = T), KurtoGrupal2 = kurtosi(CEP_Electivo$InflRicos, na.rm = T))
-
-#Varianza y curtosis pregunta 3
-group_by(CEP_Electivo, Expo_RRSS)%>%
-  summarise(VarGrupal3 = var(CEP_Electivo$InflEmpre, na.rm = T), KurtoGrupal3 = kurtosi(CEP_Electivo$InflEmpre, na.rm = T))
-
-#Varianza y curtosis pregunta 4
-group_by(CEP_Electivo, Expo_RRSS)%>%
-  summarise(VarGrupal4 = var(CEP_Electivo$DemanPPol, na.rm = T), KurtoGrupal4 = kurtosi(CEP_Electivo$DemanPPol,na.rm = ))
-
-  #Varianza y curtosis pregunta 5
-group_by(CEP_Electivo, Expo_RRSS)%>%
-  summarise(VarGrupal5 = var(CEP_Electivo$PPolIndis, na.rm = T), KurtoGrupal5 = kurtosi(CEP_Electivo$DemanPPol, na.rm = T))
