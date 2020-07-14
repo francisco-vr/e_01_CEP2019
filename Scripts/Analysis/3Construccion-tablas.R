@@ -32,6 +32,12 @@ Tabla1.1 <-descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", 
 Tabla1.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo,prop = "r", weights = CEP_Electivo$POND, na.rm = T,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 1
+TabAnexo1 <-CEP_Electivo %>%
+  group_by(Expo_RRSS) %>%
+  summarise(VarGrupal1 = var(PPubMayo, na.rm = T),
+            KurtoGrupal1 = psych::kurtosi(PPubMayo, na.rm = T))
+
 ## [RESULTADO N°2] ##
 #Grado de acuerdo con pregunta:
 ##"Los ciudadanos más ricos tienen más influencia que los demás ciudadanos en las políticas públicas" según exposición
@@ -45,6 +51,11 @@ Tabla2.1 <-descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med",
 #bivariado según exposición a RRSS
 Tabla2.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos,prop = "r", weights = CEP_Electivo$POND,
                   style = 'rmarkdown')
+#Varianza y curtosis pregunta 2
+TabAnexo2 <-CEP_Electivo %>%
+  group_by(Expo_RRSS) %>%
+  summarise(VarGrupal1 = var(InflRicos, na.rm = T),
+            KurtoGrupal1 = psych::kurtosi(InflRicos, na.rm = T))
 
 ## [RESULTADO N°3] ##
 ##"Las empresas y los grupos de interés influyen enormemente en las políticas públicas" según exposición a RRSS
@@ -58,6 +69,11 @@ Tabla3.1 <-descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med",
 Tabla3.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP_Electivo$POND,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 3
+TabAnexo3 <-CEP_Electivo %>%
+  group_by(Expo_RRSS) %>%
+  summarise(VarGrupal1 = var(InflEmpre, na.rm = T),
+            KurtoGrupal1 = psych::kurtosi(InflEmpre, na.rm = T))
 
 # Resultados sobre percepción de partidos políticos, según exposición a info de RRSS --------
 
@@ -71,6 +87,12 @@ Tabla4.1 <-descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","
 Tabla4.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 4
+TabAnexo4 <-CEP_Electivo %>%
+  group_by(Expo_RRSS) %>%
+  summarise(VarGrupal1 = var(DemanPPol, na.rm = T),
+            KurtoGrupal1 = psych::kurtosi(DemanPPol, na.rm = T))
+
 ## [RESULTADO N°5] ##
 ##Grado de acuerdo con pregunta
 ##"Los partidos políticos son indispensables para la democracia"
@@ -81,9 +103,15 @@ Tabla5.1 <-descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med",
 Tabla5.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPolIndis, prop = "r", weights = CEP_Electivo$POND,
                   style = 'rmarkdown')
 
+#Varianza y curtosis pregunta 5
+TabAnexo5 <-CEP_Electivo %>%
+  group_by(Expo_RRSS) %>%
+  summarise(VarGrupal1 = var(PPolIndis, na.rm = T),
+            KurtoGrupal1 = psych::kurtosi(PPolIndis, na.rm = T))
+
 #generación de un solo objeto para tablas
-ResulTablas <- list(Tabla1.1, Tabla1.2, Tabla2.1, Tabla2.2, Tabla3.1, Tabla3.2, Tabla4.1, Tabla4.2,
-                    Tabla5.1, Tabla5.2)
+ResulTablas <- list(Tabla1.1, Tabla1.2, TabAnexo1, Tabla2.1, Tabla2.2, TabAnexo2, Tabla3.1, Tabla3.2,
+                    TabAnexo3, Tabla4.1, Tabla4.2, TabAnexo4, Tabla5.1, Tabla5.2, TabAnexo5)
 
 #Resultados de tablas
 saveRDS(ResulTablas, file = "Data/Analysis-Data/Tablas-reporte.rds")

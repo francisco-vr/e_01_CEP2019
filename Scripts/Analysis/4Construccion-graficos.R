@@ -29,8 +29,9 @@ grafico1 <-CEP_Electivo%>%
   scale_fill_manual("Consumo de información vía Redes Sociales",
                     values = c("#E41A1C", "#377EB8"),
                     labels = c("Mucha Información", "Poca información"))
+
 #Imprimir gráfico 1
-ggsave(grafico1, filename = "grafico1.png",
+ggsave(grafico1, filename = "Output/grafico1.png",
        dpi = 400, width = 11, height = 6)
 
 ## [RESULTADO N°2] ##
@@ -55,8 +56,9 @@ grafico2 <-CEP_Electivo%>%
   scale_fill_manual("Consumo de información vía Redes Sociales",
                     values = c("#E41A1C", "#377EB8"),
                     labels = c("Mucha Información", "Poca información"))
+
 # Imprimir gráfico 2
-ggsave(grafico2, filename = "grafico2.png",
+ggsave(grafico2, filename = "Output/grafico2.png",
        dpi = 400, width = 11, height = 6)
 
 ## [RESULTADO N°3] ##
@@ -83,9 +85,8 @@ grafico3 <- CEP_Electivo%>%
                     labels = c("Mucha Información", "Poca información"))
 
 #Imprimir gráfico 3
-ggsave(grafico3, filename = "grafico3.png",
+ggsave(grafico3, filename = "Output/grafico3.png",
        dpi = 400, width = 11, height = 6)
-
 
 ##  [RESULTADO N°4]  ##
 # Gráfico de barras bivariado sobre el grado de acuerdo con la frase:
@@ -109,10 +110,10 @@ grafico4 <-CEP_Electivo%>%
   scale_fill_manual("Consumo de información vía Redes Sociales",
                     values = c("#E41A1C", "#377EB8"),
                     labels = c("Mucha Información", "Poca información"))
-#Imprimir gráfico 4
-ggsave(grafico4, filename = "grafico4.png",
-       dpi = 400, width = 11, height = 6)
 
+#Imprimir gráfico 4
+ggsave(grafico4, filename = "Output/grafico4.png",
+       dpi = 400, width = 11, height = 6)
 
 ## [RESULTADO N°5]  ##
 #Histograma simple univariado
@@ -135,8 +136,9 @@ grafico5 <-CEP_Electivo%>%
   scale_fill_manual("Consumo de información vía Redes Sociales",
                     values = c("#E41A1C", "#377EB8"),
                     labels = c("Mucha Información", "Poca información"))
+
 #Imprimir gráfico 5
-ggsave(grafico5, filename = "grafico5.png",
+ggsave(grafico5, filename = "Output/grafico5.png",
        dpi = 400, width = 11, height = 6)
 
 #Listado de gráficos
