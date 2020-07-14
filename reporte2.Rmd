@@ -3,7 +3,7 @@ title: "**Redes Sociales, Participación política y polarización**"
 subtitle: "Estudio de la opinión pública y su consumo de informacion en plataformas digitales"
 author: "Francisco Villarroel"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-bibliography: mi_biblioteca.bib
+bibliography: Mi biblioteca.bib
 csl: apa.csl
 output: pdf_document
 ---

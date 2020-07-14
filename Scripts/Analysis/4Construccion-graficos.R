@@ -21,7 +21,7 @@ grafico1 <-CEP_Electivo%>%
   scale_x_continuous(labels = c("Muy de acuerdo", "De Acuerdo",
                                 "Ni acuerdo ni desacuerdo","En desacuerdo", "Muy en desacuerdo"),
                      breaks = c(1,2,3,4,5)) +
-  labs(title = "Gráfico 2. Nivel de acuerdo con la frase",
+  labs(title = "Gráfico 1. Nivel de acuerdo con la frase",
        subtitle = "'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos'",
        x = "Nivel de Acuerdo", y = "Proporción",
        caption = "Fuente: Elaboración propia, en base a los datos de Encuesta CEP, Diciembre 2019") +
