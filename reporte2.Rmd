@@ -1,6 +1,6 @@
 ---
-title: "**Redes Sociales, Participación política y polarización. Estudio de la opinión pública y su consumo de informacion en plataformas digitales**"
-subtitle: "Hola qué tal"
+title: "**Redes Sociales, Participación política y polarización**"
+subtitle: "Estudio de la opinión pública y su consumo de informacion en plataformas digitales"
 author: "Francisco Villarroel"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 bibliography: mi_biblioteca.bib
