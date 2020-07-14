@@ -3,13 +3,12 @@
 # MAGÍSTER EN CCSS UNIVERSIDAD DE CHILE - 2020 
 
 # Carga de paquetes -------------------------------------------------------
-(dplyr)
 #Carga de paquetes y archivo de base de datos original
 
 library(haven)
 library(tidyr)
 library(tidyverse)
-library
+library (dplyr)
 
 CEP_Electivo <-as.data.frame(read_spss("Data/InputData/DataSources/Encuesta CEP 84 Dic 2019 v1.sav"))
 
@@ -281,7 +280,7 @@ grafico1 <-CEP_Electivo%>%
                      values = c("#E41A1C", "#377EB8"),
                      labels = c("Mucha Información", "Poca información"))
 #Imprimir gráfico 1
-ggsave(grafico1, filename = "grafico1.png",
+ggsave(grafico1, filename = "Output/grafico1.png",
        dpi = 400, width = 11, height = 6)
 
 ## [RESULTADO N°2] ##
@@ -307,7 +306,7 @@ grafico2 <-CEP_Electivo%>%
                      values = c("#E41A1C", "#377EB8"),
                      labels = c("Mucha Información", "Poca información"))
 # Imprimir gráfico 2
-ggsave(grafico2, filename = "grafico2.png",
+ggsave(grafico2, filename = "Output/grafico2.png",
        dpi = 400, width = 11, height = 6)
 
 ## [RESULTADO N°3] ##
@@ -334,7 +333,7 @@ grafico3 <- CEP_Electivo%>%
                      labels = c("Mucha Información", "Poca información"))
 
 #Imprimir gráfico 3
-ggsave(grafico3, filename = "grafico3.png",
+ggsave(grafico3, filename = "Output/grafico3.png",
        dpi = 400, width = 11, height = 6)
 
 
@@ -361,7 +360,7 @@ grafico4 <-CEP_Electivo%>%
                      values = c("#E41A1C", "#377EB8"),
                      labels = c("Mucha Información", "Poca información"))
 #Imprimir gráfico 4
-ggsave(grafico4, filename = "grafico4.png",
+ggsave(grafico4, filename = "Output/grafico4.png",
        dpi = 400, width = 11, height = 6)
 
 
@@ -387,7 +386,7 @@ grafico5 <-CEP_Electivo%>%
                      values = c("#E41A1C", "#377EB8"),
                      labels = c("Mucha Información", "Poca información"))
 #Imprimir gráfico 5
-ggsave(grafico5, filename = "grafico5.png",
+ggsave(grafico5, filename = "Output/grafico5.png",
        dpi = 400, width = 11, height = 6)
 
 #Listado de gráficos
