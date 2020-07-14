@@ -75,7 +75,7 @@ Sin embargo puedes hacer sub categorías cuando estás enlistando algo:
 
 Acá hay algunos elementos para probar si los comandos funcan bien [@andersonIndependenceDigitalActivism2019]. Lamentablemente el primero, de la imagen, AHORA SI FUNCIONA MIERDAAAA[@lindh_fragilidad_2019; @anagnostopoulos_viral_2014]:
 
-![](grafico1.png)
+![](Output/grafico1.png)
 
 Pero no importa, porque eso ya lo resolveré pronto
 
