@@ -30,7 +30,7 @@ Tabla1.1 <-descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", 
                  weights = CEP_Electivo$POND, style = 'rmarkdown')
 
 Tabla1.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo,prop = "r", weights = CEP_Electivo$POND, na.rm = T,
-                  style = 'rmarkdown')
+                  style = 'rmarkdown', chisq = T)
 
 #Varianza y curtosis pregunta 1
 TabAnexo1 <-CEP_Electivo %>%
@@ -50,7 +50,8 @@ Tabla2.1 <-descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med",
 
 #bivariado según exposición a RRSS
 Tabla2.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos,prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown')
+                  style = 'rmarkdown', chisq = T)
+
 #Varianza y curtosis pregunta 2
 TabAnexo2 <-CEP_Electivo %>%
   group_by(Expo_RRSS) %>%
@@ -67,7 +68,7 @@ Tabla3.1 <-descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med",
 
 #Bivariado según exposición a RRSS
 Tabla3.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown')
+                  style = 'rmarkdown', chisq = T)
 
 #Varianza y curtosis pregunta 3
 TabAnexo3 <-CEP_Electivo %>%
@@ -85,7 +86,7 @@ TabAnexo3 <-CEP_Electivo %>%
 Tabla4.1 <-descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","sd","cv"), weights = CEP_Electivo$POND,
                  style = 'rmarkdown')
 Tabla4.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown')
+                  style = 'rmarkdown', chisq = T)
 
 #Varianza y curtosis pregunta 4
 TabAnexo4 <-CEP_Electivo %>%
@@ -101,7 +102,7 @@ TabAnexo4 <-CEP_Electivo %>%
 Tabla5.1 <-descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med", "sd", "cv"),
                  weights = CEP_Electivo$POND, style = 'rmarkdown')
 Tabla5.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPolIndis, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown')
+                  style = 'rmarkdown', chisq = T)
 
 #Varianza y curtosis pregunta 5
 TabAnexo5 <-CEP_Electivo %>%
@@ -115,7 +116,6 @@ ResulTablas <- list(Tabla1.1, Tabla1.2, TabAnexo1, Tabla2.1, Tabla2.2, TabAnexo2
 
 #Resultados de tablas
 saveRDS(ResulTablas, file = "Data/Analysis-Data/Tablas-reporte.rds")
-
 # Limpiar entorno de trabajo
 rm(list=ls())
 

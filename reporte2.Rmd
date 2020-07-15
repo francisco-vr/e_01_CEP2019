@@ -96,7 +96,7 @@ En el gráfico 1 podemos observar que existe, en términos generales, un nivel d
 
 Ya de manera más desagregada, podemos observar algunas diferencias importantes. En primera instancia, la respuesta "ni acuerdo ni desacuerdo" tiene una diferencia de casi cinco puntos porcentuales, en la cual quienes consumen más información vía redes sociales se muetran más seguros de su opinión que quiens consumen una poca información vía redes sociales; Es más, esta respuesta es la segunda más frecuente en quienes tienen menor relación con la información en estas plataformas digitales. En este sentido la información vía SNS evidencia un vaciamiento del centro y político y de la inseguridad.
 
-Si observamos los elementos de varianza y curtosis tambié constatamos algunos elementos interesantes: El grupo de personas que tiene una alta información vía redes sociales tiene una dispersión y un apuntalamiento de pensamiento político _(var = 0.95, k = 0.43)_ , respecto de quienes tienen menos exposición a información por plataformas digitales _(var = 0.87, k = 0,04)_, sobre todo en el apuntalamiento de quienes revisan menos información vía redes sociales, donde observamos cerca de los 5 puntos porcentuales de diferencia entre los que consumen mucha información vía redes sociales frente a los que consumen poca información. Esto habla sin duda está fuera de un modelo clásico de consenso donde la mediana debería estar al centro de la opinión pública [@lindh_fragilidad_2019 , 107], pero que seguiremos observando en las siguientes preguntas.
+Si observamos los elementos de varianza y curtosis tambié constatamos algunos elementos interesantes: El grupo de personas que tiene una alta información vía redes sociales tiene una dispersión y un apuntalamiento de pensamiento político _(var = 0.95, k = 0.43)_ , respecto de quienes tienen menos exposición a información por plataformas digitales _(var = 0.87, k = 0.04)_, sobre todo en el apuntalamiento de quienes revisan menos información vía redes sociales, donde observamos cerca de los 5 puntos porcentuales de diferencia entre los que consumen mucha información vía redes sociales frente a los que consumen poca información. Esto habla sin duda está fuera de un modelo clásico de consenso donde la mediana debería estar al centro de la opinión pública [@lindh_fragilidad_2019 , 107], pero que seguiremos observando en las siguientes preguntas.
 
 ![](Output/grafico2.png)
 
@@ -104,13 +104,21 @@ En el gráfico 2 observamos una tendencia bastante más radicalizada de lo que o
 
 En segundo punto vemos que nuevamente el centro de opinión o lugar de indecisión ("ni acuerdo ni desacuerdo") tiene una muy alta diferencia entre quienes consumen mucha información vía redes sociales con respecto a quienes consumen poca información por estos medios, con una diferencia de unos 6 puntos porcentuales, dejando en un muy bajo nivel el medio del espectro de opinión. 
 
-Si embargo probablemente de manera visual el dato que llama más la atención es la diferencia en quienes están muy de acuerdo con la idea de que los ricos tienen más influencia que los demás ciudadanos, habiendo una diferencia de 13 puntos porcentuales, habían una mayor frecuencia entre quienes consumen mucha información vía redes sociales, respecto de quienes consumen menos información vía redes sociales. Si comparamos estos datos dados por la varianza y curtosis, observamos que la varianzas son prácticamente iguales _(var = 1,45, var = 1,4)_ entre los que se exponen mucho y poco a información de redes sociales, respectivamente. sin embargo las curtosis son diametralmente opuestas, mostrando una alta modalidad en quienes consumen mucha información _(k = 1,45)_ y una tendencia más hacia la bimodalidad entre quienes consumen menos información _(k = -0,51)_. 
+Si embargo probablemente de manera visual el dato que llama más la atención es la diferencia en quienes están muy de acuerdo con la idea de que los ricos tienen más influencia que los demás ciudadanos, habiendo una diferencia de 13 puntos porcentuales, habían una mayor frecuencia entre quienes consumen mucha información vía redes sociales, respecto de quienes consumen menos información vía redes sociales. Si comparamos estos datos dados por la varianza y curtosis, observamos que la varianzas son prácticamente iguales _(var = 1.45, var = 1.44)_ entre los que se exponen mucho y poco a información de redes sociales, respectivamente. sin embargo las curtosis son diametralmente opuestas, mostrando una alta modalidad en quienes consumen mucha información _(k = 0.49)_ y una tendencia más hacia la bimodalidad entre quienes consumen menos información _(k = -0.51)_. 
 
-
-
-
+En síntesis, las personas que consumen mucha información creen de manera más generalizada que los ricos tienen más influencia que los ciudadanos normales, respecto de quienes no se informan por estos medios. esto habla de opiniones más extremas, pero no estrictamente polarizadas en lo que implica la teoría más clásica que la define.
 
 ![](Output/grafico3.png)
+
+La tercera pregunta es sobre la influencia de empresas y de grupos de interés en las políticas públicas, la cual en general hay un agrupamiento más tendiende a que la gente en efecto sí cree que estos actores sociales 
+
+mucha info (var = 1.43, k = 0.18)
+poca info (var = 1,31  = k = -0.52)
+
+
+
+
+
 
 
 
@@ -123,8 +131,10 @@ yyyy ¡El últimoooo!
 
 ![](Output/grafico5.png)
 
+## Discusión
 
-¡Pero no os preocupéis! Existe un paquete llamado ``knitr`` que nos permitirá hacer bellas tablas que cualquier consultora envidiaría.
+
+## Conclusiones
  
 \newpage
 
