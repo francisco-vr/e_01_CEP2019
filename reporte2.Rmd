@@ -115,14 +115,27 @@ yyyy ¡El últimoooo!
  
 \newpage
 
-## **Anexos: Tablas de frecuencia, cruzadas y tablas de Varianza y Curtosis, segun preguntas seleccionadas**
-ñlkñlkñlk
+## appendix
 
+**Anexos: Tablas de frecuencia, cruzadas y tablas de Varianza y Curtosis, segun preguntas seleccionadas**
+
+Puxa la custión
 
 ```{r, anexo, results='asis', echo=FALSE}
-knitr::kable(tablas[[2]], caption = "Soy una tablita indefensa", )
-
+kableExtra::kable(tablas[[1]], digits = 2, caption = "Descriptivos Pregunta", format = "latex", booktabs = T)
 ```
+AIUDAAAAAAAAA
+
+```{r tabanexa2, results='asis', echo=F}
+kableExtra::kable(tablas[[2]], digits = 2, caption = "Otra tabla más grande", format = "latex", booktabs = T)
+```
+Puta la weá no sé qué hacer
+```{r, tabanexa3, results='asis', echo=F}
+kableExtra::kable(tablas[[3]], digits = 2, caption = "Varianza y curtosis pregunta 1", format = "latex", booktabs = T)
+```
+
+
+
 
 \newpage
 ## Referencias
