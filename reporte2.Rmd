@@ -14,20 +14,31 @@ library(kableExtra)
 library(knitr)
 knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
 ```
+```{r, carga-base, echo=FALSE}
+tablas <- readRDS("Data/Analysis-Data/tablas.rds")
+graficos <- readRDS("Data/Analysis-Data/graficos.rds")
+```
 
 ## Introducción
-Desde las últimas dos décadas hemos presenciado una transformación importante en las formas de intercambio de pensamiento político, formas de asociación y de mecanismos de presión y deliberación política, generándose un verdadero espacio público digitalizado y una sociedad civil digital, conformando un pliegue digital que ha sido soporte fundamental para acciones colectivas en Chile desde el año 2010 hasta la fecha, de manera que se establece una nueva forma inmaterial de lo que ocurre en el mundo material [@castells_redes_2012; @dahlgren_internet_2015; @millaleo_activismo_2013]. 
+Desde las últimas dos décadas hemos presenciado una transformación importante en las formas de intercambio de opinión política, formas de asociación y de mecanismos de presión y deliberación, generándose un verdadero _espacio público digitalizado_ y _una sociedad civil digital_, conformando un pliegue digital que ha sido soporte fundamental para acciones colectivas en Chile desde el año 2010 hasta la fecha, estableciendo una nueva forma inmaterial de lo que ocurre en el mundo material [@castells_redes_2012; @dahlgren_internet_2015; @millaleo_activismo_2013]. 
 
-Lo que en algún momento los académicos valoraban de manera optimista como espacios de sociabilidad y deliberación emergente y prometedora de la gran “ágora electrónica global” [@castellsGalaxiaInternetReflexiones2001], ahora se ha visto en una visión más pesimista donde las grandes empresas controlan la mayor cantidad de plataformas digitales [@dolataCollectivityPowerInternet2018] construyen formas especiales de cómo se entiende este espacio digital en dichas plataformas a través de algoritmos. La construcción de estos algoritmos ha sido aprovechada por distintos grupos políticos que generan Fake news y posverdades [@karpfDigitalPoliticsTrump2017; @vanderlinden_you_2020], convirtiendo el espacio público digital en una zona de constante asedio de información y exposición de conflictos sociales, con una polarización política creciente y sostenida. 
+Lo que en algún momento los académicos valoraban de manera optimista como espacios de sociabilidad y deliberación emergente y prometedora de la gran _ágora electrónica global_ [@castellsGalaxiaInternetReflexiones2001], se ha convertido en una visión más pesimista donde las grandes empresas controlan la mayor cantidad de plataformas digitales [@dolataCollectivityPowerInternet2018], construyen formas especiales de cómo se entiende este espacio digital en dichas plataformas a través de algoritmos. La construcción de estos algoritmos ha sido aprovechada por distintos grupos políticos que generan _Fake news_ y posverdades [@karpfDigitalPoliticsTrump2017; @vanderlinden_you_2020], convirtiendo el espacio público digital en una zona de constante asedio de información y exposición de conflictos sociales, con una polarización política creciente y sostenida. 
 
-En Chile las últimas investigaciones constatan una creciente polarización por grupos[@lindh_fragilidad_2019], donde las plataformas digitales se vuelven caja de resonancia y, según algunos expertos, aumentan la polarización y el conflicto social entre las personas a partir del “Estallido social” desde el 18 de Octubre del 2019 en Chile [@pautaPolarizarseDeprimirsePeligros2019;@laterceraYoMeSali2019], al punto de ser consideradas “fascistas” y que es necesaria su regulación y control [@diariofinanciero_ascanio_]. Sin embargo a pesar de que varios comentaristas en chile se hablan de polarización política y cómo las plataformas digitales contribuyen a ello, no se sabe cuál es la influencia real, qué efectos trae, cuál es su intensidad y las maneras en que se gatilla.
+Probablemente el ciberactivismo ha llegado a su punto máximo en el país en el llamado "Estallido social" de Octubre del 2019. Señala Pablo Alconta en un reciente artículo: "la principal arma de confrontación entre las armas del Estado de Chile, basadas en la violencia tanto de su fuerza y sus términos jurídicos, se han encontrado las redes sociales virtuales y los equipos de telefonía móvil de las manifestantes, con lo que han intentado capturar un fragmento de la realidad y hacer frente a la violencia, una forma otra de acción política" [@alcota_insurreccion_2020, 13]. Las redes sociales se conformaron como el soporte principal para romper lógicas mediáticas que no dejaban conforme a una ciudadanía movilizada, con altos niveles de desconfianza hacia el gobierno y con una creciente conformación se nuevos sujetos sociales que compatían información, consejos para las protestas, información crítica sobre dichos en medios de comunicación de masas tradicionales y que puso en tela de juicio todo el sistema comunicacional, apuntando a las bases de las estructuras del Estado Chileno. 
+
+Las últimas investigaciones publicadas constatan una creciente polarización por grupos en el país, desde el año 2014 hasta el 2017[@lindh_fragilidad_2019 , 116]. El ciberactivismo fue tomado por la prensa como la caja de resonancia que aumenta la polarización y el conflicto social entre las personas a partir del “Estallido social” [@pautaPolarizarseDeprimirsePeligros2019;@laterceraYoMeSali2019], al punto de ser consideradas “fascistas” y que es necesaria su regulación y control [@diariofinanciero_ascanio_], Sin embargo a pesar de que varios medios de comunicación instalaran  esta idea, no se sabe cuál es la influencia real, qué efectos trae, cuál es su intensidad y las maneras en que se gatilla, si es que ocurren. 
 
 ### Objetivos e Hipótesis 
 
-El objetivo central de esta investigación es observar el nivel de polarización política existente en la población en base a su consumo de información de plataformas digitales, llamadas "SNS" o también "Redes sociales". El estallido social provocó una apertura radical en los repertorios de protesta social, la cual en un contexto de medios de comunicación cerrados y donde se daba énfasis en una visión ideológica favorable al gobierno, las redes sociales se conviertieron en un lugar de transmisión de información alternativa, creada por ciudadanos que circulaba horizontalmente por diversos medios alternativos pero también de manera interpersonal. 
+El objetivo central de esta investigación es observar la opinión pública y la polarización política existente en la población en base a su consumo de información de plataformas digitales, llamadas "SNS" o también "Redes sociales". A modo de hipótesis,consideramos que:
 
-Consideramos que mientras haya un consumo de información más alto de información vía redes sociales, habrá una mayor probabilidad de tomar posición política y salir de la indesición propia de las escalas likert de cinco puntos, habrá una mayor polarización como dispersión y apuntalamiento del pensamiento político según el espectro total, y 
+* H1: Mientras más alto el consumo de información vía redes sociales, mayor probabilidad de tener posiciones más extremas en el espectro de opinión pública.
 
+* H2: Mientras más consumo de información vía redes sociales las personas se vuelven menos "indecisas", tomando posición de acuerdo o desacuerdo en distintos temas.
+
+* H3: Mientras más consumo de información vía redes sociales hay mayor apuntalamiento o acumulación de personas entorno a un grado de de acuerdo o desacuerdo frente a distintos temas, dejando formas de distribución bimodales dentro del espectro de opinión.
+
+Presentaremos además el marco teórico que moviliza esta nvestigación y luego la metodología empleada.
 
 ## Marco teórico
 
@@ -53,69 +64,64 @@ La ventaja que tiene a primera visión sobre la polarización es que es bastante
 
 ## Metodología
 
+Para la realización de esta investigación se utilizó la encuesta CEP del mes de Diciembre del año 2019. Esta encuesta, como señala su ficha técnica, posee un muestreo probabilístico ultietápico con un total de 1496 encuestas hechas válidamente. Utilizamos esta encuesta dado el tipo de muestreo que utiliza, su sistematicidad a través del tiempo y su accesibilidad. Se utilizará como variable independiente la exposición a información a redes sociales, la cual se crea a partir de la pregunta 30 "¿Cuánta información recibió usted de situaciones relacionadas a la crisis de comenzó en octubre 2019 a través de lo siguientes medios?". Se agrupo en una nueva categoría llamada "mucha información" quienes respondieron originalmente "Mucha" y "bastante"; por otro lado se agrupó en una segunda categoría llamada "poca información" a quienes respondieron "algo", "poca", y "nada" de información.
+
+Luego de construir nuestra raviable independiente, elegimos cnco preguntas sobre el valor que las personas asignan al sistema político chileno. Estas se dividen en tres preguntas sobre el rol de la democracia y la influencia de distintos actores en la creación de políticas públicas:
+
+* Pregunta 5.a: "Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos"
+* Pregunta 5.c: "Los ciudadanos más ricos tienen más influencia que los demás ciudadanos en las políticas pública"
+* Pregunta 5.d: "Las empresas y los grupos de interés influyen enormemente en las políticas públicas"
+
+Estas preguntas ^[No se consideró la pregunta 5.b ("Las políticas públicas generalmente reflejan lo que quiere usted" pues la pregunta considera la opinión propia sobre el reflejo de uno en el estado y no de su funcionamiento estructural)] ayudan a evaluar el funcionamiento general que tiene la democracia y observar la percepción de las personas en tanto el peso que distintos actores sociales tienen mś peso: si los ciudadanos, las empresas o las personas más ricas. 
+
+Además de ello se decidió integrar preguntas sobre el valor de los partidos políticos en la democracia, siendo un elemento fundamental en el funcionamiento político occidental. Para ello se tomaron las siguientes preguntas del módulo especial:
+
+* Pregunta 6.a: "Los partidos políticos reflejan las demandas de los ciudadanos"
+* Pregunta 6.b: "Los partidos políticos son indispensables para la democracia"
+
+Para el análisis de la información se realización tablas de contingencia para la comparación entre las categorías de "mucha información" y "poca información" en cada una de las preguntas, observando la distribución porcental de los grados de acuerdo en cada uno de los subgrupos. Sobre ella nos vamos a centrar en 3 puntos escenciales:
+
+* Nivel de respuestas "ni acuerdo ni desacuerdo" según cantidad de información consumida. Esta respuesta habla de indecisión al momento de tomar posición y ver las variaciones entre uno  u otro grupo son fundamentales.
+* Nivel de "extremismo" de respuestas, observando cuánto porcentaje se acumula en ambas puntas del rango de opiniones.
+
+Además de estas observaciones más bien descriptivas, las acompañaremos con las observaciones de Di Maggio y tomadas también por Lindh y otros investigadores sobre observar la polarización de la población a partir de la varianza y la curtosis de cada una de las preguntas. 
+
 ## Análisis de resultados
-### Construcción de variables: exposición a información de Redes Sociales
-
-
-
-
-**Hola!** Este es un archivo en Rmarkdown. _¿Qué es Rmarkdown?_, Rmarkdown es un paquete de Rstudio utiliza un lenguaje  de "marcaje" para construir textos y presentaciones. Puedes hacer archivos en formato _HTML, PDF, and MS word_. Ya pero: Qué chucha es el "marcaje"? El marcaje es un lenguaje de programación donde reparar texto para salir formteado de la forma en que tu quieras; es como cuando tu escribes en Whatsapp o Telegram las "" o las "__" para las negritas y cursivas, y cuando envías el mensaje aparece el resultado que son **Las negritas** o _Las cursivas_
-
-Además de eso puedes escribir distinos puntos por separado:
-
-* Como este
-
-
-Sin embargo puedes hacer sub categorías cuando estás enlistando algo:
-
-* Podemos hacer una
-
-* y otra
-
-* Quizas una tercera
-
-## Otros ejemplos
-
-Acá hay algunos elementos para probar si los comandos funcan bien [@andersonIndependenceDigitalActivism2019]. Lamentablemente el primero, de la imagen, AHORA SI FUNCIONA MIERDAAAA[@lindh_fragilidad_2019; @anagnostopoulos_viral_2014]:
 
 ![](Output/grafico1.png)
 
-Pero no importa, porque eso ya lo resolveré pronto
+Y tenemos otro grafico:
 
-Por otro lado esta taba sí funciona, aunque es bastante fea.
+![](Output/grafico2.png)
 
-```{r tabla1, echo = FALSE, message=FALSE, warning=FALSE}
-load("Data/intermediate Data/P_CEP2019.RData")
-library(summarytools)
-freq(CEP_Electivo$Expo_RRSS, weights = CEP_Electivo$POND, na.rm = TRUE)
-```
+
+E incluso tenemos otro más!
+
+![](Output/grafico3.png)
+
+
+
+Vamos por el cuartoooo
+
+![](Output/grafico4.png)
+
+
+yyyy ¡El últimoooo!
+
+![](Output/grafico5.png)
+
 
 ¡Pero no os preocupéis! Existe un paquete llamado ``knitr`` que nos permitirá hacer bellas tablas que cualquier consultora envidiaría.
-
-
-\newpage
-
-Aunque ....
-
-No todo es tabla en esta vida, también tenemos... ¡Gráficos!
-
-Un ejemplo de ellos es el siguiente:
-
-
-
-## Otras partes más fomes que vienen en el archivo por defecto
-
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-
-
+ 
 \newpage
 
 ## **Anexos: Tablas de frecuencia, cruzadas y tablas de Varianza y Curtosis, segun preguntas seleccionadas**
+ñlkñlkñlk
 
-```{r, echo=FALSE}
-knitr::kable(`tablas`[[1]], digits = 2, caption = "Descriptivos protesta")
+
+```{r, anexo, results='asis', echo=FALSE}
+knitr::kable(tablas[[2]], caption = "Soy una tablita indefensa", )
+
 ```
 
 \newpage
