@@ -30,7 +30,7 @@ Las últimas investigaciones publicadas constatan una creciente polarización po
 
 ### Objetivos e Hipótesis 
 
-El objetivo central de esta investigación es observar la opinión pública y la polarización política existente en la población en base a su consumo de información de plataformas digitales, llamadas "SNS" o también "Redes sociales". A modo de hipótesis,consideramos que:
+El objetivo central de esta investigación es observar la opinión pública y la polarización política existente en la población en base a su consumo de información de plataformas digitales, llamadas "SNS" _(Social Network services)_ o también "Redes sociales". A modo de hipótesis,consideramos que:
 
 * H1: Mientras más alto el consumo de información vía redes sociales, mayor probabilidad de tener posiciones más extremas en el espectro de opinión pública.
 
@@ -118,15 +118,44 @@ En síntesis, vemos que hay una tendencia de dispersión y de simetría similare
   
 ![](Output/grafico4.png)
 
-En el gráfico 4 y 5 veremos la percepción de la ciudadanía con respecto a los partidos políticos y cuál es su valor real. 
+En el gráfico 4 y 5 veremos la percepción de la ciudadanía con respecto a los partidos políticos y cuál el valor que la ciudadanía les otorga en el contexto democrático. 
 
+En el caso del gráfico 4 observamos que hay una tendencia generalizada a que los ciudadanos crean que los partidos políticos no están para reflejar las demandas de los ciudadanos, habiendo una concentración importante en las categorías "en desacuerdo" y "muy en desacuerdo", independiente de la cantidad de información que consumen de plataformas digitales. 
+
+Si observamos de manera pomenorizada según las categorías de información establecida, vemos nuevamente que hay una tendencia de parte de quienes tienen más exposición a información de redes sociales a salir del centro y/o de la zona de indecisión frente a la posición de los particdos políticos, pero comparativamente con los anteriores gráficos es considerablemente menor, habiendo una diferencia de menos de tres puntos porcentuales. 
+
+Si observamos los datos de varianza y curtosis, vemos que las varianzas son más o menos similares (mucha info: var = 0.86; poca info = 0.90) de la cual se puede apreciar en el gráfico que tienen distribuciones bastante similares, pero la distribucion de quienes consumen más información es más cercana a ser uni modal (k = 0.81) respecto de la de quienes consumen menos información, al ser una distribución más "achatada" (k, 0.38). 
+
+En síntesis, vemos que para este gráfico se cumplen las mismas condiciones que los tres anteriores, sin embargo las distinciones no son tan evidentes como ocurría en los otros casos, lo que sin duda habla de otro tratamiento de la visión de los partidos políticos.
 
 ![](Output/grafico5.png)
 
+Por último, el gráfico 5 habla sobre el apoyo a la idea de que los partidos políticos son indispensables a la democracia o no. Vemos que en términos generales hay una distribución bastante distinta a las anteriores, siendo en general distribuciones más amplias (mucha info = 1.28; poca info = 1.14) que si bien la media se encuentra de todas formas en la opción "en desacuerdo". Por otro lado los niveles de apuntalamiento son relativamente similares (mucha info: k = -0.82; poca info: k = -0.68)
+
+Siguiendo con los elementos a observar, así como la ocurrido con los anteriores gráficos quienes reciben mucha información vía redes sociales tienen un porcentaje de "ni acuerdo ni desacuerdo" más bajo que quienes consumen poca información vía redes sociales, estando en todas las otras respuestas en el caso inverso.
+
+Otro punto que llama la atención es que quienes ven más información por redes sociales tienen una valoración más positiva de los partidos políticos para la democracia, con casi un 2.5 puntos porcentuales de diferencia, que a la larga puede no parece mucho pero indican que quiees se informan más por estas plataforas digitales parecieran no tener una aversión tan grande a los partidos políticos. las opciones para entender esto pueden ser muchas y las discutiremos en la próxima sección
+
+Un último elemento a descatar de este gráfico es que en las colas donde está el pensamiento más extremo, ambas están dominadas por quienes consumen más información proveniente de plataformas SNS. Esto es más particular de las preguntas relativas a partidos políticos, pues en lo que respecta la influencia de distintos actores sociales en el gobierno la repartición de la cola menos frecuente era muy similar entre quienes altosy bajos niveles de información por plataformas digitales, pero en estos dos casos las colas menos frecuentes también son de quienes utilizan más redes sociales.
+
 ## Discusión
+
+Las siguientes cosas son importantes:
+
+- Las RRSS aumentan la toma de posición en la política; podría hablarde de una mayr eficiencia en la información incluso -> cominucación intepersonal, confianza y homofilia política
+
+- De todas formas llaman a un pensamiento más extremo que el de otras formas de informarse. acá podríamos hablar que más que polarización de la población, podemos hablar que el hallazgo principal es que las RRSS inducen a un pensamiento algo más extremo.
+  -> Este extremismo no es contra cualquier cosa; acá lo hemos constatado sobre todo para cuestones relativas a quienes ejercen poder sobre el estado y las decisciones políticas es donde más asociación hay entre pensamiento extremo y consumo de redes sociales. 
+  -> No así con el rol de los partidos políticos. si bien la tendencia permanece el pensamiento extremo se desvanece y hay también incluso na mejor valoración a los partidos políticos que quienes reciben poca información. (acá poder tirarme un rollo más bien de la desafección política metizada, de que no es con todas las cosas y quizás las persoans suelen distinguir entre algunos partidos y otros)
+
+-> Deficiencias de la investigación: Falta análisis de test estadísticos, y pdobar con variables de control como nivel educativo o nivel socioeconómico.
+
+-> Nuevas vías de investigación: aprovechar la larga data de la CEP y empezar a realizar un estudio de año a año según la politización de la información, que hasta donde sé desde el 2013 en adelante comienza a preguntar por el tipo de información que uno ve. hacer un trabajo comparativo entre quienes venmucha información de redes sociales vesus otros medios de comunicación como televisión, Radio o Diarios en papel, el cual puede ayudar a ver más variantes.
 
 
 ## Conclusiones
+
+Sin duda lo que más me cuesta hacer.
  
 \newpage
 
@@ -137,17 +166,6 @@ Puxa la custión
 ```{r, tablaaneza1, results='asis', echo=FALSE}
 kableExtra::kable(tablas[[1]], digits = 2, caption = "Descriptivos Pregunta", format = "latex", booktabs = T)
 ```
-AIUDAAAAAAAAA
-
-```{r tablanexa2, results='asis', echo=F}
-kableExtra::kable(tablas[[2]], digits = 2, caption = "Otra tabla más grande", format = "latex", booktabs = T)
-```
-Puta la weá no sé qué hacer
-```{r, tablanexa3, results='asis', echo=F}
-kableExtra::kable(tablas[[3]], digits = 2, caption = "Varianza y curtosis pregunta 1", format = "latex", booktabs = T)
-```
-
-
 
 
 \newpage
