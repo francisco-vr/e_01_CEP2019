@@ -1,6 +1,6 @@
 ---
-title: "**Redes Sociales, Participación política y polarización**"
-subtitle: "Estudio de la opinión pública y su consumo de informacion en plataformas digitales"
+title: "**Redes Sociales, Opinión pública y polarización**"
+subtitle: "Estudio sobre el pensamiento extremo y su relación con el consumo de informacion en plataformas digitales"
 author: "Francisco Villarroel"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 bibliography: Mi  biblioteca.bib
@@ -140,18 +140,24 @@ Un último elemento a descatar de este gráfico es que en las colas donde está 
 
 ## Discusión
 
-Las siguientes cosas son importantes:
+En términos generales, respecto de la H1 podemos afirmar que en efecto existe una relación entre el consumo de información y posición más extrema en las opiniones, pero con un matiz en que esto ocurre en mayor medida cuando se tratan de opiniones sobre el rol de la democracia y el poder de actores sociales frente al Estado; cuando se trata del rol de partidos políticos la tendencia se mantiene pero en menor intensidad.
 
-- Las RRSS aumentan la toma de posición en la política; podría hablarde de una mayr eficiencia en la información incluso -> cominucación intepersonal, confianza y homofilia política
+Nuestra segunda hipótesis (H2) también se confirma de manera bastante clara. La cantidad de información que se consume lleva a tomar posiciones más directas que quienes tienen poca exposición a ella. Existe una discusión importante si "ni de acuerdo ni desacuerdo" significa un pensamiento de centro o si es simplemente inseguridad de tomar posiciones, y en esta investigación consideramos que las variables para considerar una persona de centro son otras muy distintas, y lo que se refleja en la escala de likert en estas preguntas en particular es el grado de seguridad o inseguridad al momento de tomar posición. 
 
-- De todas formas llaman a un pensamiento más extremo que el de otras formas de informarse. acá podríamos hablar que más que polarización de la población, podemos hablar que el hallazgo principal es que las RRSS inducen a un pensamiento algo más extremo.
-  -> Este extremismo no es contra cualquier cosa; acá lo hemos constatado sobre todo para cuestones relativas a quienes ejercen poder sobre el estado y las decisciones políticas es donde más asociación hay entre pensamiento extremo y consumo de redes sociales. 
-  -> No así con el rol de los partidos políticos. si bien la tendencia permanece el pensamiento extremo se desvanece y hay también incluso na mejor valoración a los partidos políticos que quienes reciben poca información. (acá poder tirarme un rollo más bien de la desafección política metizada, de que no es con todas las cosas y quizás las persoans suelen distinguir entre algunos partidos y otros)
+En este sentido, sí, las redes sociales ayudan con información para tomar posición para esto. El punto es bajo cuáles mecanismos son los que la gente toma más seguridad de responder si se informan vía redes sociales. ¿es porque son testigos y partícipes de dialogos racionales, abiertos, donde la deliberación racional de corte habermasiana tiene espacio en redes digitales? Lamentablemente este estudio no tiene capacidad para responder esto, pero sin duda que son diseños experimentales se puede llegar a explicaciones bastante consistentes para responder esta duda. Por lo pronto vale la pena recordar que bastante literatura ha constatado que las redes sociales provocan una homofilia política bastante alta [@boutyline_social_2017; @anagnostopoulos_viral_2014; @dehghani_purity_2016; @valera-ordaz_political_2018], lo que de una u otra forma facilita el proceso de circulación de información, hay un proceso de afianzamiento de la confianza entre dos personas y por tanto la credibilidad aumenta, lo que de una u otra forma significa un aumento de la cohesión social en base a las creencias políticas, pero a la vez puede geerar nuevas fisuras en la estructura social: "El riesgo de fragmentación en la estructura social puede asociarse con fenómenos conflictivos como la discriminación hacia minorías, o la reproducción de la desigualdad social" [@bargsted_patrones_]. En defintiva, podemos tener una ayuda a generar nuevas confianas y participación política con ayuda de las redes sociales, pero si estas a la vez producen homofilia política podemos llegar a otros niveles de pérdida de deliberación política entre personas diferentes y polarización entendida como impermeabilidad [@bordonaba-plouPolarizacionComoImpermeabilidad2019], es decir la incapacidad de ser convencido con argumentos que no son los propios ni vienen desde mi línea ideológia, por muy deseestructurada que sea.
 
--> Deficiencias de la investigación: Falta análisis de test estadísticos, y pdobar con variables de control como nivel educativo o nivel socioeconómico.
+Por otro lado rechazamos la H3, ya que el concepto de polarización utilizado es más bien ortodoxo y con líneas políticas bastante claras: debe haber una alta dispersión del pensamiento político, tiene que haber una simetría equivalente a 0 (es decir, equilibrada) pero debe haber una kurtosis suficiente y con cifras negativas para que se vuelva bimodal y no unimodal como en la mayoría de los gráficos que hemos traído a exposición. En este sentido no podemos hablar de polarización de la población vía redes sociales, así como lo afirmaron otros ivestigadores usando la misma encuesta pero a nivel general al menos hasta el año 2008, con una incipiente polarización en el sector de personas que habitualmente no votan [@lindh_fragilidad_2019 , 114-115], pero sí podemos hablar de pensamiento _más extremo_ que polarizado.
 
--> Nuevas vías de investigación: aprovechar la larga data de la CEP y empezar a realizar un estudio de año a año según la politización de la información, que hasta donde sé desde el 2013 en adelante comienza a preguntar por el tipo de información que uno ve. hacer un trabajo comparativo entre quienes venmucha información de redes sociales vesus otros medios de comunicación como televisión, Radio o Diarios en papel, el cual puede ayudar a ver más variantes.
+Es importante destacar la valoración de los partidos políticos. Esto si bien no es parte de las hipótesis a testar, un elemento no considerado en la investigación es que quienes tienen más información de internet tienen una mejor valoración de los partidos políticos; si bien la tendencia permanece el pensamiento extremo (a favor o en contra) no es tan alto. Se ha hablado con bastante fundamentación cómo se ha gestado largos períodos de desafección política en Chile, donde el ciclo de movilizaciones fue una esperanza para una reativación ciudadana pero, a nivel agregado, persiste un aumento de desafección política [@bargsted_desafeccion_2018, 1] y si bien sobre la opinión del Estado el rechazo sigue siendo alto, departe de los partidos polítcos puede haber algún cambio a nivel de esta categoría.
 
+Esta investigación tiene algunos elementos a mejorar hacia un futuro. El primero de ellos es que, al hacer tablas de contingencia y una variable más bien "atípica" no relacionada a las típicas formas de clasificar como género, edad, educación o nivel socioeconómico, sería bueno integrarlas a medida de variable de control en las tablas de contingencia para responder más precisamente: ¿Es el consumo de redes sociales y no el género lo que aumenta la opinión más extrema? ¿Será el nivel educacional de quienes más se informan lo que imapactará de manera indirecta la tendencia centrifuga de opinión política? este tipo de cosas podrían ser confirmadas o descartadas integrando variables de control. En esa misma línea se deberían aplicar mecanismos de test de hipótsis como la chi cuadrada para ver los grados de librtad o dependencia de las variables de consumo de información y los grados de polarización. 
+
+En última instancia, con esta investigación se abre un abanico importante de ampliaciones y profundizaciones de este estudio. Una de ellas es ampliar los marcos temporales de la investigación, aprovechando la sistematicidad de la información levantada por la encuesta CEP; en una revisión por los cuestionarios, desde el año 2013 en adelante se comienza a preguntas por el consumo de información vía redes sociales, lo cual permite analizar pormenorizadamente:
+
+* Medir cuántas personas se informan vía redes sociales con respecto a otros medios de comunicación
+* Comparar históricamente los grados de polarización, pensamiento extremo y desafección política según corresponda, a través del tiempo
+
+Por último hacer una comparativa más genera, estructural y a largo tiempo si el uso de redes sociales aumenta la participación política de las personas utilizando otras preguntas de la encuesta de la CEP, como asistencia a cabildos, marchas, firma de peticiones, jornadas de discusión, de formación, etc. Con ello podemos calibrar 
 
 ## Conclusiones
 
@@ -163,7 +169,7 @@ Sin duda lo que más me cuesta hacer.
 
 Puxa la custión
 
-```{r, tablaaneza1, results='asis', echo=FALSE}
+```{r echo=FALSE, message=TRUE, warning=TRUE, tablaaneza1, results='asis'}
 kableExtra::kable(tablas[[1]], digits = 2, caption = "Descriptivos Pregunta", format = "latex", booktabs = T)
 ```
 
