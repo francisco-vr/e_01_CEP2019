@@ -110,24 +110,16 @@ En síntesis, las personas que consumen mucha información creen de manera más 
 
 ![](Output/grafico3.png)
 
-La tercera pregunta es sobre la influencia de empresas y de grupos de interés en las políticas públicas, la cual en general hay un agrupamiento más tendiende a que la gente en efecto sí cree que estos actores sociales 
+La tercera pregunta es sobre la influencia de empresas y de grupos de interés en las políticas públicas, la cual en general hay un agrupamiento más tendiende a que la gente en efecto sí cree que estos actores sociales influyen en las políticas públicas, sin embargo en quienes reciben menos información de plataformas digitales la distribución no es tan concentrada en esas dos alternativas ("Muy de acuerdo" y "de acuerdo"), sino que se distribuye en una medida no menor en "ni acuerdo ni desacuerdo" y en desacuerdo.  Profundizandosobre el segundo punto, vemos que hay en el centro de pensamiento cerca de 5 puntos porcentuales de diferencia, habiendo bastante menos inseguridad o opinión de centro de parte que tienen más consumo de redes sociales respecto de quienes consumen menos información de este tipo. 
 
-mucha info (var = 1.43, k = 0.18)
-poca info (var = 1,31  = k = -0.52)
+En lo que respecta la distribución de las respuestas, quienes consumen una mayor información vía redes sociales tiene una varianza levemente mayor y una curtosis que habla de una distribución unimodal _(var = 1.43, k = 0.18)_, en comparación a quienes reciben poca información dentro de plataformas digitales _(var = 1.31  = k = -0.52)_ que tiene una menor dispersión pero su apuntalamiento también es menor, no teniendo mayores _peaks_ en algunas de las opciones. Es por esta misma razón que a nivel descriptivo llama la atención que la posición extrema de estar "muy de acuerdo" sobre la influencia de empresas y grupos de interés, teniendo una diferencia de más de once puntos porcentuales de diferencia con respecto a quienes reciben poca información. 
 
-
-
-
-
-
-
-
-Vamos por el cuartoooo
-
+En síntesis, vemos que hay una tendencia de dispersión y de simetría similares entre los que se exponen a mucha y a poca información, si embargo el apuntalamiento de las opiniones más extremas las tienen las personas que consumen más información de plataformas digitales, siendo menos propensos a irse al centro o a ser indecidos y tomar posiciones con tendencia centrífuga respecto de quienes no tienen estas pautas informativas.
+  
 ![](Output/grafico4.png)
 
+En el gráfico 4 y 5 veremos la percepción de la ciudadanía con respecto a los partidos políticos y cuál es su valor real. 
 
-yyyy ¡El últimoooo!
 
 ![](Output/grafico5.png)
 
