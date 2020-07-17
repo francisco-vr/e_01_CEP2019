@@ -30,7 +30,7 @@ Tabla1.1 <-descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", 
                  weights = CEP_Electivo$POND, style = 'rmarkdown')
 
 Tabla1.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo,prop = "r", weights = CEP_Electivo$POND, na.rm = T,
-                  style = 'rmarkdown', chisq = T)
+                  style = 'rmarkdown', chisq = T, headings = F)
 
 #Varianza y curtosis pregunta 1
 TabAnexo1 <-CEP_Electivo %>%
@@ -50,13 +50,13 @@ Tabla2.1 <-descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med",
 
 #bivariado según exposición a RRSS
 Tabla2.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos,prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown', chisq = T)
+                  style = 'rmarkdown', chisq = T, headings = F)
 
 #Varianza y curtosis pregunta 2
 TabAnexo2 <-CEP_Electivo %>%
   group_by(Expo_RRSS) %>%
-  summarise(VarGrupal1 = var(InflRicos, na.rm = T),
-            KurtoGrupal1 = psych::kurtosi(InflRicos, na.rm = T))
+  summarise(VarGrupal2 = var(InflRicos, na.rm = T),
+            KurtoGrupal2 = psych::kurtosi(InflRicos, na.rm = T))
 
 ## [RESULTADO N°3] ##
 ##"Las empresas y los grupos de interés influyen enormemente en las políticas públicas" según exposición a RRSS
@@ -68,13 +68,13 @@ Tabla3.1 <-descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med",
 
 #Bivariado según exposición a RRSS
 Tabla3.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown', chisq = T)
+                  style = 'rmarkdown', chisq = T, headings = F)
 
 #Varianza y curtosis pregunta 3
 TabAnexo3 <-CEP_Electivo %>%
   group_by(Expo_RRSS) %>%
-  summarise(VarGrupal1 = var(InflEmpre, na.rm = T),
-            KurtoGrupal1 = psych::kurtosi(InflEmpre, na.rm = T))
+  summarise(VarGrupal3 = var(InflEmpre, na.rm = T),
+            KurtoGrupal3 = psych::kurtosi(InflEmpre, na.rm = T))
 
 # Resultados sobre percepción de partidos políticos, según exposición a info de RRSS --------
 
@@ -86,13 +86,13 @@ TabAnexo3 <-CEP_Electivo %>%
 Tabla4.1 <-descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","sd","cv"), weights = CEP_Electivo$POND,
                  style = 'rmarkdown')
 Tabla4.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown', chisq = T)
+                  style = 'rmarkdown', chisq = T, headings = F)
 
 #Varianza y curtosis pregunta 4
 TabAnexo4 <-CEP_Electivo %>%
   group_by(Expo_RRSS) %>%
-  summarise(VarGrupal1 = var(DemanPPol, na.rm = T),
-            KurtoGrupal1 = psych::kurtosi(DemanPPol, na.rm = T))
+  summarise(VarGrupal4 = var(DemanPPol, na.rm = T),
+            KurtoGrupal4 = psych::kurtosi(DemanPPol, na.rm = T))
 
 ## [RESULTADO N°5] ##
 ##Grado de acuerdo con pregunta
@@ -102,20 +102,20 @@ TabAnexo4 <-CEP_Electivo %>%
 Tabla5.1 <-descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med", "sd", "cv"),
                  weights = CEP_Electivo$POND, style = 'rmarkdown')
 Tabla5.2 <-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPolIndis, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown', chisq = T)
+                  style = 'rmarkdown', chisq = T, headings = F)
 
 #Varianza y curtosis pregunta 5
 TabAnexo5 <-CEP_Electivo %>%
   group_by(Expo_RRSS) %>%
-  summarise(VarGrupal1 = var(PPolIndis, na.rm = T),
-            KurtoGrupal1 = psych::kurtosi(PPolIndis, na.rm = T))
+  summarise(VarGrupal5 = var(PPolIndis, na.rm = T),
+            KurtoGrupal5 = psych::kurtosi(PPolIndis, na.rm = T))
 
 #generación de un solo objeto para tablas
-ResulTablas <- list(Tabla1.1, Tabla1.2, TabAnexo1, Tabla2.1, Tabla2.2, TabAnexo2, Tabla3.1, Tabla3.2,
+tablas <- list(Tabla1.1, Tabla1.2, TabAnexo1, Tabla2.1, Tabla2.2, TabAnexo2, Tabla3.1, Tabla3.2,
                     TabAnexo3, Tabla4.1, Tabla4.2, TabAnexo4, Tabla5.1, Tabla5.2, TabAnexo5)
 
 #Resultados de tablas
-saveRDS(ResulTablas, file = "Data/Analysis-Data/Tablas-reporte.rds")
+saveRDS(tablas, file = "Data/Analysis-Data/tablas.rds")
 # Limpiar entorno de trabajo
 rm(list=ls())
 

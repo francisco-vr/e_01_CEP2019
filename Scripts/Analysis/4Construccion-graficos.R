@@ -142,8 +142,8 @@ ggsave(grafico5, filename = "Output/grafico5.png",
        dpi = 400, width = 11, height = 6)
 
 #Listado de gráficos
-ResultGraf <- list(grafico1, grafico2, grafico3, grafico4, grafico5)
-saveRDS(ResultGraf, file = "Data/Analysis-Data/gráficos-reporte.rds")
+graficos <- list(grafico1, grafico2, grafico3, grafico4, grafico5)
+saveRDS(graficos, file = "Data/Analysis-Data/graficos.rds")
 
 # Limpiar entorno de trabajo
 rm(list=ls())
