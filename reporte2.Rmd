@@ -164,20 +164,20 @@ Hola que tal bueno que estés todo bien. ok
 ## **Anexos: Tablas de frecuencia, cruzadas y tablas de Varianza y Curtosis, segun preguntas seleccionadas**
 
 ```{r tabP1, echo=F, results='asis'}
-knitr::kable(tablas[[1]], digits = 2, format = 'latex', booktabs = T, caption = "descriptivo nivel de acuerdo con pregunta: 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos'")
-knitr::kable(tablas[[2]], digits = 2, format = 'latex', booktabs = T, caption = "Tabla cruzada de nivel de acuerdo con pregunta: 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según grado de exposición a información de redes sociales", col.names = c("Muy de acuerdo", "De acuerdo", "NA/ND", "En desacuerdo", "Muy en desacuerdo","NA's", "Total"))
-knitr::kable(tablas[[3]], digits = 2, format = "latex", booktabs = T, caption = "varianza y kurtosis sobre preguna 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos'", col.names = c("Información vía Redes sociales", "Varianza", "Curtosis"))
+knitr::kable(tablas[[1]], digits = 2, format = 'latex', booktabs = T, caption = "Descriptivos sobre nivel de acuerdo con frase: 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos'")
+knitr::kable(tablas[[2]], format = 'latex', booktabs = T, caption = "Tabla cruzada de nivel de acuerdo con pregunta: 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según grado de exposición a información de redes sociales", col.names = c("Muy de acuerdo", "De acuerdo", "NA/ND", "En desacuerdo", "Muy en desacuerdo","NA's", "Total"))
+knitr::kable(tablas[[3]], digits = 2, format = "latex", booktabs = T, caption = "varianza y Curtosis sobre preguna 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos'", col.names = c("Información vía Redes sociales", "Varianza", "Curtosis"))
 ```
 ```{r tabP2, echo=F,results='asis'}
-knitr::kable(tablas[[4]], digits = 2, format = 'latex', booktabs = T, caption = "descriptivo P2")
-knitr::kable(tablas[[5]], digits = 2, format = 'latex', booktabs = T, caption = "tabla cruzada P2", col.names = c("Muy de acuerdo", "De acuerdo", "Ni acuerdo ni desacuerdo", "En desacuerdo", "Muy en desacuerdo","NA's", "Total"))
-knitr::kable(tablas[[6]], digits = 2, format = 'latex', booktabs = T, caption = "varianza y kurtosis P2", col.names = c("Información vía Redes sociales", "Varianza", "Curtosis"))
+knitr::kable(tablas[[4]], digits = 2, format = 'latex', booktabs = T, caption = "Descriptivos sobre nivel de acuerdo con frase 'Los ciudadanos más ricos tienen más influencia que los demás ciudadanos en las políticas públicas'")
+knitr::kable(tablas[[5]], digits = 2, format = 'latex', booktabs = T, caption = "Tabla cruzada de nivel de acuerdo con la frase 'Los ciudadanos más ricos tienen más influencia que los demás ciudadanos en las políticas públicas', según grado de exposición a información de redes sociales", col.names = c("Muy de acuerdo", "De acuerdo", "Ni acuerdo ni desacuerdo", "En desacuerdo", "Muy en desacuerdo","NA's", "Total"))
+knitr::kable(tablas[[6]], digits = 2, format = 'latex', booktabs = T, caption = "Varianza y Curtosis sobre la pregunta 'Los ciudadanos más ricos tienen más influencia que los demás ciudadanos en las políticas públicas'", col.names = c("Información vía Redes sociales", "Varianza", "Curtosis"))
 ```
 
 ```{r tabP3, echo=FALSE, results='asis'}
-knitr::kable(tablas[[7]], digits = 2, format = 'latex', booktabs = T, caption = "descriptivo P3")
-knitr::kable(tablas[[8]], digits = 2, format = 'latex', booktabs = T, caption = "tabla cruzada P3", col.names = c("Muy de acuerdo", "De acuerdo", "Ni acuerdo ni desacuerdo", "En desacuerdo", "Muy en desacuerdo","NA's", "Total"))
-knitr::kable(tablas[[9]], digits = 2, format = 'latex', booktabs = T, caption = "varianza y kurtosis P3",col.names = c("Información vía Redes sociales", "Varianza", "Curtosis"))
+knitr::kable(tablas[[7]], digits = 2, format = 'latex', booktabs = T, caption = "Descriptivos sobre nivel de acuerdo con frase 'Las empresas y los grupos de interés influyen enormemente en las políticas públicas'")
+knitr::kable(tablas[[8]], digits = 2, format = 'latex', booktabs = T, caption = "Tabla cruzada de nivel de acuerdo con la frase 'Las empresas y los grupos de interés influyen enormemente en las políticas públicas', según grado de exposición a información de redes sociales", col.names = c("Muy de acuerdo", "De acuerdo", "Ni acuerdo ni desacuerdo", "En desacuerdo", "Muy en desacuerdo","NA's", "Total"))
+knitr::kable(tablas[[9]], digits = 2, format = 'latex', booktabs = T, caption = "Varianza y Curtosis sobre el nivel de acuerdo con la pregunta 'Las empresas y los grupos de interés influyen enormemente en las políticas públicas'",col.names = c("Información vía Redes sociales", "Varianza", "Curtosis"))
 ```
 
 ```{r tabP4, echo=FALSE, results='asis'}

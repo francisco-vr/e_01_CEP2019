@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.7.3)  17 JUL 2020 10:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.7.3)  17 JUL 2020 10:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -703,12 +703,12 @@ Package pdftex.def Info: Output/grafico5.png  used on input line 525.
 (pdftex.def)             Requested size: 469.76819pt x 256.23718pt.
 [7 <./Output/grafico4.png (PNG copy)>] [8 <./Output/grafico5.png (PNG copy)>] [
 9] [10]
-Overfull \hbox (69.13478pt too wide) in paragraph at lines 705--726
+Overfull \hbox (106.77353pt too wide) in paragraph at lines 705--726
  [][] 
  []
 
 
-Overfull \hbox (58.35693pt too wide) in paragraph at lines 705--726
+Overfull \hbox (87.0512pt too wide) in paragraph at lines 705--726
  [] 
  []
 
@@ -794,14 +794,14 @@ l.962 \newpage
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.962 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.8}) has been already used, duplicate ignored
+              ] [13pdfTeX warning (ext4): destination with the same identifier 
+(name{table.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.962 \newpage
-              ] [13pdfTeX warning (ext4): destination with the same identifier 
-(name{table.9}) has been already used, duplicate ignored
+              pdfTeX warning (ext4): destination with the same identifier (name
+{table.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -824,33 +824,33 @@ l.962 \newpage
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.962 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{table.13}) has been already used, duplicate ignored
+              ] [14pdfTeX warning (ext4): destination with the same identifier 
+(name{table.13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.962 \newpage
-              ] [14pdfTeX warning (ext4): destination with the same identifier 
-(name{table.14}) has been already used, duplicate ignored
+              pdfTeX warning (ext4): destination with the same identifier (name
+{table.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1031 \leavevmode
-                  \hypertarget{ref-dimaggio_have_1996}{}%pdfTeX warning (ext4):
- destination with the same identifier (name{table.15}) has been already used, d
-uplicate ignored
+l.962 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{table.15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1031 \leavevmode
-                  \hypertarget{ref-dimaggio_have_1996}{}%]
+l.962 \newpage
+              ]
 Underfull \hbox (badness 10000) in paragraph at lines 1065--1069
 \T1/lmr/m/n/10 (+12) https://www.pauta.cl/ciencia-y-tecnologia/polarizarse-y-de
 primirse-los-peligros-de-informarse-unicamente-
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1107.
 [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1107.
+[16]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1107.
 (./reporte2.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1107.
@@ -863,9 +863,9 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14370 strings out of 482424
- 208683 string characters out of 5948190
- 525572 words of memory out of 5000000
+ 14371 strings out of 482424
+ 208690 string characters out of 5948190
+ 527764 words of memory out of 5000000
  29649 multiletter control sequences out of 15000+600000
  594322 words of font info for 131 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -877,10 +877,10 @@ m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type
 1/public/lm/lmri10.pfb>
-Output written on reporte2.pdf (15 pages, 1065657 bytes).
+Output written on reporte2.pdf (16 pages, 1066826 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 207 compressed objects within 3 object streams
+ 80 named destinations out of 1000 (max. 500000)
  14434 words of extra memory for PDF output out of 17280 (max. 10000000)
 
