@@ -37,4 +37,5 @@ Versiones de paquetes Utilizados:
 - pacman: 0.5.1
 - haven: 2.3.1
 - tidyverse: 1.30
+- psych: 1.9.1
 

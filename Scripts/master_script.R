@@ -38,7 +38,7 @@ source("Scripts/Analysis/4Construccion-graficos.R")
 # Parte 5: Crea reporte de investigación
 # En base a los resultados genera reporte reproducible
 
-rmarkdown::render('"DR_RRSS_y_Política Villarroel.Rmd')
+rmarkdown::render('DR_RRSS_y_Politica_Villarroel.Rmd')
 
 # Limpiar entorno de trabajo
 rm(list=ls())
