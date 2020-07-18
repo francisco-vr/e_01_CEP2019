@@ -36,4 +36,5 @@ Versiones de paquetes Utilizados:
 - rmarkdown: 2.3
 - pacman: 0.5.1
 - haven: 2.3.1
+- tidyverse: 1.30
 
