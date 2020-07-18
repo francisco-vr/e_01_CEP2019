@@ -3,7 +3,7 @@
 
 Bievenid@s!
 
-Este es el repositorio del Estudio sobre la influencia del consumo de información de redes sociales en la opinión política, en base a la encuesta CEP de Diciembre del 2019. Este trabajo está hecho en el contexto del **curso Electivo: "Herramientas para el análisis cuantitativo: Ciencia abierta y Software Libre** Dictado en el Magister de Ciencias Sociales mención sociología de la modernización de la Universidad de Chile, año 2020. A Cargo de los Profesores Cristobal Moya y Felipe Ruiz. 
+Este es el repositorio del Estudio sobre la influencia del consumo de información de redes sociales en la opinión política, en base a la encuesta CEP de Diciembre del 2019. Este trabajo está hecho en el contexto del curso Electivo: **"Herramientas para el análisis cuantitativo: Ciencia abierta y Software Libre**, Dictado en el Magister de Ciencias Sociales mención sociología de la modernización de la Universidad de Chile, año 2020. A Cargo de los Profesores Cristobal Moya y Felipe Ruiz. 
 
 ### ¿Qué encontraremos en este repositorio?
 
@@ -11,7 +11,7 @@ En este repositorio están contenidos todos los materiales necesarios para la ej
 
 ### ¿Dónde puedo ver el informe?
 
-Si sólo necesitas revisar el informe, te recomendamos que vayas al inicio del proyecto y descargues el documento "DR_RRSS_y_Política Villarroel.pdf" y puedas ver por tí mism@ los resultados a los que hemos llegado.
+Si sólo necesitas revisar el informe, te recomendamos que vayas al inicio del proyecto y descargues el documento "DR_RRSS_y_Política_Villarroel.pdf" y puedas ver por tí mism@ los resultados a los que hemos llegado.
 
 ### ¿Cómo puedo ejecutar el proyecto reproducible?
 
