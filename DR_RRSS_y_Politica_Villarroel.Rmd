@@ -161,28 +161,30 @@ Lo cierto es que los mecanismos de conformación de opinión y las tensiones ent
 
 \newpage
 ## **Anexos N°1: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según exposición a información de Redes Sociales**
+
 ```{r An1, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", "sd", "cv"),
-                 weights = CEP_Electivo$POND, style = 'rmarkdown')
-ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo, prop = "r", weights = CEP_Electivo$POND, style='rmarkdown', chisq = T)
+                 weights = CEP_Electivo$POND, style = 'rmarkdown', headings = FALSE)
+ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo, prop = "r", weights = CEP_Electivo$POND,
+                  style = 'rmarkdown', chisq = T, headings = FALSE)
 ```
 
 \newpage
 
 ## **Anexo N°2: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según exposición a información de Redes Sociales** 
-```{r An2, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+```{r An2, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE, results='asis'}
 descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med", "sd", "cv"),
-                 weights = CEP_Electivo$POND, style = 'rmarkdown')
+                 weights = CEP_Electivo$POND, style = 'rmarkdown', headings = FALSE)
 ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos,prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown', chisq = T, headings = F)
+                  style = 'rmarkdown', chisq = T, headings = FALSE)
 ```
 \newpage
 ## **Anexo N°3: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Las empresas y los grupos de interés influyen enormemente en las políticas públicas', según exposición a información de Redes Sociales** 
 ```{r An3, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
 descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med", "sd", "cv"),
-                 weights = CEP_Electivo$POND, style = 'rmarkdown')
+                 weights = CEP_Electivo$POND, style = 'rmarkdown', headings = FALSE)
 ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown', chisq = T, headings = F)
+                  style = 'rmarkdown', chisq = T, headings = FALSE)
 ```
 
 \newpage
@@ -190,17 +192,17 @@ ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP
 
 ```{r An4, echo=F,warning=FALSE, message=FALSE, results='asis'}
 descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","sd","cv"), weights = CEP_Electivo$POND,
-                 style = 'rmarkdown')
-ctable(CEP_Electivo$Expo_RRSS,CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND, style = 'rmarkdown', chisq = T, headings = F)
+                 style = 'rmarkdown', headings = FALSE)
+ctable(CEP_Electivo$Expo_RRSS,CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND, style = 'rmarkdown', chisq = T, headings = FALSE)
 ```
 \newpage
 ## **Anexo N°5: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Los partidos políticos son indispensables para la democracia', según exposición a información de Redes Sociales**
 
-```{r tabP5, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+```{r An5, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med", "sd", "cv"),
-                 weights = CEP_Electivo$POND, style = 'rmarkdown')
+                 weights = CEP_Electivo$POND, style = 'rmarkdown', headings = FALSE)
 ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPolIndis, prop = "r", weights = CEP_Electivo$POND,
-                  style = 'rmarkdown', chisq = T, headings = F)
+                  style = 'rmarkdown', chisq = T, headings = FALSE)
 ```
 \newpage
 ## **Referencias**
