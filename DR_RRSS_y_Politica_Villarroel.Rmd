@@ -160,7 +160,7 @@ La vida pública en la actualidad está entrecruzda por una serie de redes de in
 Lo cierto es que los mecanismos de conformación de opinión y las tensiones entre la influencia de ciertos medios y personas cercanas con cierta ideología con un tema que se ha instalado, y que lamentablemente en chile aún es muy incipiente más allá de honrosos avances que han dado luces de este fenómeno en Chile. Dadas las características de la gran cantidad de información política que se discute día a día no es fácil poder tomar muestras apropiadas para su estudio, pero lentamente los campos de la sociología digital, la política digital e incluso la antorpología digital van dando nuevas luces del cambio social vivido en chile. El estallido social no ha acabado sino que ha entrado el nuevas fases, y es probable que las rdes sociales nuevamente sean centrales en ese cambio.
 
 \newpage
-## **Anexos N°1: Tablas de frecuencia, Tabla cruzada y tablas de Varianza y Curtosis sobre nivel de acuerdo con frase 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según exposición a información de Redes Sociales**
+## **Anexos N°1: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según exposición a información de Redes Sociales**
 ```{r An1, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 descr(CEP_Electivo$PPubMayo, transpose = T, stats = c("mean", "med", "sd", "cv"),
                  weights = CEP_Electivo$POND, style = 'rmarkdown')
@@ -169,7 +169,7 @@ ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$PPubMayo, prop = "r", weights = CEP_
 
 \newpage
 
-## **Anexo N°2:Tablas de frecuencia, Tabla cruzada y tablas de Varianza y Curtosis sobre nivel de acuerdo con frase 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según exposición a información de Redes Sociales** 
+## **Anexo N°2: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Las políticas públicas generalmente reflejan lo que quiere la mayoría de los ciudadanos', según exposición a información de Redes Sociales** 
 ```{r An2, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
 descr(CEP_Electivo$InflRicos, transpose = T, stats = c("mean", "med", "sd", "cv"),
                  weights = CEP_Electivo$POND, style = 'rmarkdown')
@@ -177,7 +177,7 @@ ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflRicos,prop = "r", weights = CEP_
                   style = 'rmarkdown', chisq = T, headings = F)
 ```
 \newpage
-## **Anexo N°3: Tablas de frecuencia, Tabla cruzada y tablas de Varianza y Curtosis sobre nivel de acuerdo con frase 'Las empresas y los grupos de interés influyen enormemente en las políticas públicas', según exposición a información de Redes Sociales** 
+## **Anexo N°3: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Las empresas y los grupos de interés influyen enormemente en las políticas públicas', según exposición a información de Redes Sociales** 
 ```{r An3, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
 descr(CEP_Electivo$InflEmpre, transpose = T, stats = c("mean", "med", "sd", "cv"),
                  weights = CEP_Electivo$POND, style = 'rmarkdown')
@@ -186,7 +186,7 @@ ctable(CEP_Electivo$Expo_RRSS, CEP_Electivo$InflEmpre, prop = "r", weights = CEP
 ```
 
 \newpage
-## **Anexo N°4: Tablas de frecuencia, Tabla cruzada y tablas de Varianza y Curtosis sobre nivel de acuerdo con frase 'A Los partidos políticos reflejan las demandas de los ciudadanos', según exposición a información de Redes Sociales**
+## **Anexo N°4: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'A Los partidos políticos reflejan las demandas de los ciudadanos', según exposición a información de Redes Sociales**
 
 ```{r An4, echo=F,warning=FALSE, message=FALSE, results='asis'}
 descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","sd","cv"), weights = CEP_Electivo$POND,
@@ -194,7 +194,7 @@ descr(CEP_Electivo$DemanPPol, transpose = T, stats = c("mean","med","sd","cv"), 
 ctable(CEP_Electivo$Expo_RRSS,CEP_Electivo$DemanPPol, prop = "r", weights = CEP_Electivo$POND, style = 'rmarkdown', chisq = T, headings = F)
 ```
 \newpage
-## **Anexo N°5: Tablas de frecuencia, Tabla cruzada y tablas de Varianza y Curtosis sobre nivel de acuerdo con frase 'Los partidos políticos son indispensables para la democracia', según exposición a información de Redes Sociales**
+## **Anexo N°5: Descriptivos y tabla cruzada sobre nivel de acuerdo con frase 'Los partidos políticos son indispensables para la democracia', según exposición a información de Redes Sociales**
 
 ```{r tabP5, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 descr(CEP_Electivo$PPolIndis, transpose = T, stats = c("mean", "med", "sd", "cv"),
