@@ -14,7 +14,8 @@ pacman::p_load(tidyverse,
                dplyr,
                car,
                summarytools,
-               psych)
+               psych,
+               rmarkdown)
 
 #Parte 1: carga y recorte de base de datos
 # Expulsa archivo de datos para editar
