@@ -11,7 +11,7 @@ En este repositorio están contenidos todos los materiales necesarios para la ej
 
 ### ¿Dónde puedo ver el informe?
 
-Si sólo necesitas revisar el informe, te recomendamos que vayas al inicio del proyecto y descargues el documento "DP_RRSS_y_Política Villarroel.pdf" y puedas ver por tí mism@ los resultados a los que hemos llegado.
+Si sólo necesitas revisar el informe, te recomendamos que vayas al inicio del proyecto y descargues el documento "DR_RRSS_y_Política Villarroel.pdf" y puedas ver por tí mism@ los resultados a los que hemos llegado.
 
 ### ¿Cómo puedo ejecutar el proyecto reproducible?
 
