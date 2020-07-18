@@ -32,8 +32,8 @@ Nota: Para la realización de todo el proceso de investigación se utilizó el l
 Versiones de paquetes Utilizados:
 - Dplyr: 0.85
 - Summarytools: 0.96
-- ggplot2: 
-- rmarkdown
-- pacman
-- haven
+- ggplot2: 3.3.2
+- rmarkdown: 2.3
+- pacman: 0.5.1
+- haven: 2.3.1
 
