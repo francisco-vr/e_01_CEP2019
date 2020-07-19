@@ -17,10 +17,10 @@ Si sólo necesitas revisar el informe, te recomendamos que vayas al inicio del p
 
 Sugerimos los siguientes pasos:
 
-1.Clona el repositorio (En la esquina superior derecha de este recuadro dice "Clone or download")
-2.Abre el archivo "e_01_CEP19.Rproj" en tu Rstudio o ventana de R
-3.Ya abierto el proyecto, dirígete a la carpeta "Scripts" y abre el archivo "master.script.R"
-4.Selecciona todo el Script y presiona "run" en la esquina superior derecha del recuadro del script.
+*1.Clona el repositorio (En la esquina superior derecha de este recuadro dice "Clone or download")
+*2.Abre el archivo "e_01_CEP19.Rproj" en tu Rstudio o ventana de R
+*3.Ya abierto el proyecto, dirígete a la carpeta "Scripts" y abre el archivo "master.script.R"
+*4.Selecciona todo el Script y presiona "run" en la esquina superior derecha del recuadro del script.
 
 ¡Listo!
 
